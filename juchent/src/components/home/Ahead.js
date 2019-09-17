@@ -1,11 +1,21 @@
-import React,{Component} from "react"
-import  {connect}  from "react-redux"
+import React, {Component} from "react"
+import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import svipList from "../../store/actionCreator/Svip";
-class Ahead extends Component{
+import Swiper from 'swiper/dist/js/swiper.js'
+import 'swiper/dist/css/swiper.min.css'
+
+class Ahead extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            priorList: this.props.priorList
+        }
+    }
+
     render() {
         console.log(this.props)
-        return(
+        return (
             <section className="vip-ahead">
                 <a href="#">
                     <div className="vip-ahead__advert">
@@ -23,51 +33,80 @@ class Ahead extends Component{
 
                 <div className="swiper-container home-banner-wrap">
                     <div className="swiper-wrapper">
+                        {this.state.priorList.map(v=>
+                            <div className={"swiper-slide"} key={v.schedular_id}>
+                                <div className="vip-ahead__list">
 
-                        <div className="swiper-slide">
-                            <div className="vip-ahead__list">
+                                    <div className="vip-ahead__list__item">
+                                        <a href="" className="vip-ahead__list__item__wrap">
+                                            <img
+                                                src={v.pic}
+                                                className="vip-ahead__list__item__wrap__pic"/>
+                                        </a>
+                                    </div>
+                                    <div className="vip-ahead__list__info">
+                                        <a href="#">
+                                            <h3 className="vip-ahead__list__info__title text-double">{v.schedular_name}</h3>
 
-                                <div className="vip-ahead__list__item">
-                                    <a href="" className="vip-ahead__list__item__wrap">
-                                        <img
-                                            src="https://image.juooo.com/group1/M00/03/10/rAoKmV17Of-ANaviAABk6br_K4U472.jpg"
-                                            className="vip-ahead__list__item__wrap__pic" />
-                                    </a>
-                                </div>
-                                <div className="vip-ahead__list__info">
+                                        </a>
+                                        <p className="vip-ahead__list__info__venue text-single">{v.city_name} | {v.venue_name}</p>
+                                        <p className="vip-ahead__list__info__tip">
+                                            <span className="c_ff6">09/17 12:00</span>
+                                            <span className="vip-ahead__list__info__tip__text">开始</span>
+                                        </p>
+                                    </div>
                                     <a href="#">
-                                        <h3 className="vip-ahead__list__info__title text-double">"文华大奖"获奖舞剧《永不消逝的电波》-深圳站</h3>
-
+                                        <span className="vip-ahead__list__lab">开售提醒</span>
                                     </a>
-                                    <p className="vip-ahead__list__info__venue text-single">深圳 | 南山文体中心剧院大剧院</p>
-                                    <p className="vip-ahead__list__info__tip">
-                                        <span className="c_ff6">09/17 12:00</span>
-                                        <span className="vip-ahead__list__info__tip__text">开始</span>
-                                    </p>
                                 </div>
-                                <a href="#">
-                                    <span className="vip-ahead__list__lab">开售提醒</span>
-                                </a>
+
                             </div>
-
-                        </div>
-
+                        )}
                     </div>
+                    <div  className="swiper-pagination vip-pagination swiper-pagination-bullets"></div>
                 </div>
             </section>
         )
     }
+
     componentDidMount() {
         this.props.getSvipList();
+        console.log(this.props)
     }
-}
-function mapStateToProps(state) {
-      console.log(state)
-    return{
+    componentWillUnmount() {
+        if (this.swiper) { // 销毁swiper
+            this.swiper.destroy()
+        }
+    }
 
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps.priorList)
+        this.setState({
+            priorList: nextProps.priorList
+        }, () => {
+            new Swiper('.swiper-container', {
+                loop: true,
+                speed:1000,
+                autoplay: {
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination'
+                }
+            })
+        })
     }
 }
-function mapDispatchTo(dispatch) {
-    return bindActionCreators(svipList,dispatch)
+
+function mapStateToProps(state) {
+
+    return {
+        priorList: state.SvipList.priorList
+    }
 }
-export default connect(mapStateToProps,mapDispatchTo)(Ahead)
+
+function mapDispatchTo(dispatch) {
+    return bindActionCreators(svipList, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchTo)(Ahead)

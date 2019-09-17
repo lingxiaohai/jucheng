@@ -13,19 +13,41 @@
 
 /* 轮播图 */
 
-.swiper-container {
+.vip-ahead .swiper-container {
     margin-left: auto;
     margin-right: auto;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    padding-bottom: .53333rem;
 }
-* { touch-action: none; }
+
 .main-wrap .main-wrap__content .swiper-container{
-    height: 193.3868px;
+    height: 100%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: .2;
+}
+.home-banner-wrap .swiper-pagination.vip-pagination .swiper-pagination-bullet {
+    background-color: #ff6743;
+}
+.home-banner-wrap .swiper-pagination span.swiper-pagination-bullet-active {
+    opacity: 1;
+    width: .34667rem;
+    border-radius: .06667rem;
 }
 
 .banner-wrap__block{
@@ -33,8 +55,8 @@
     width: 100%;
     height: 100%;
 }
-.main-wrap .main-wrap__content .swiper-container slider am-carousel{
-    height: 193.3868px;
+.main-wrap__content .swiper-container slider am-carousel{
+    height:100%;
     width: 100%;
 }
 
@@ -156,7 +178,7 @@
 
 
 
-.swiper-container {
+.advertion-wrap .advertion-wrap .vip-ahead .swiper-container {
     margin-left: auto;
     margin-right: auto;
     position: relative;
