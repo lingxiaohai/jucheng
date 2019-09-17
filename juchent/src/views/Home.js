@@ -10,10 +10,11 @@ import "../assets/css/tab.css"
                 {routerArr[0].Children.map((v,index)=>
                     <Route {...v}  key={index}></Route>
                 )}
+
             <div className={"tabs"}>
                 <nav className={'nav'}>
                 <div className={"nav-item"}>
-                    <NavLink to={"/"} className={"nav-item-link router-link-exact-active"} exact>
+                    <NavLink to={"/"} className={"nav-item-link router-link-exact-active"}  exact>
                         <span className={"icon home-icon"}></span>
                         <span className="nav-name nav-name0" style={{display:"none"}} >首页</span>
                     </NavLink>
@@ -42,7 +43,7 @@ import "../assets/css/tab.css"
 
             </div>
 
-                </>
+            </>
         )
     }
  }

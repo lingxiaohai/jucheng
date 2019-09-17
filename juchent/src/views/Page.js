@@ -21,6 +21,7 @@ import {bindActionCreators} from "redux"
                 </section>
 
                 </main>
+                <input type="button" value={"跳转演唱会"} onClick={()=>{this.props.history.push("/show/showsLibrary")}}/>
             </>
         )
     }

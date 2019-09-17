@@ -8,7 +8,6 @@ import { bindActionCreators} from "redux"
 class App extends React.Component{
 
     render() {
-        console.log(this.props);
         return(
             <div id={"app"}>
                 <div className="home page">

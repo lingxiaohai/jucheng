@@ -4,7 +4,7 @@ import Login from "../views/Login"
 import Theater from "../views/Theater"
 import Page from "../views/Page"
 import Cart from "../views/Cart"
-
+import ShowsLibrary from '../views/ShowsLibrary'
 const route =[
     {
         path:"/",
@@ -15,7 +15,7 @@ const route =[
                 path:"/",
                 name:"Page",
                 component:Page,
-                exact:true
+                exact:true,
             },
             {
                 path:"/my",
@@ -39,6 +39,11 @@ const route =[
         path:"/Login",
         name:"login",
         component:Login
+    },
+    {
+        path:"/show/showsLibrary",
+        name:"showslibrary",
+        component:ShowsLibrary
     }
 ];
 export default route

@@ -6,7 +6,7 @@ export const changeSwiperList=function (payload) {
             type:GENGAI_SWIPERLIST,
             payload
         }
-}
+};
 export default {
      getSwiper(){
 
