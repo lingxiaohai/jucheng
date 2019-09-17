@@ -1,6 +1,6 @@
-import React, {Component} from "react"
-import {connect} from "react-redux"
-import {bindActionCreators} from "redux"
+import React, { Component } from "react"
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
 import svipList from "../../store/actionCreator/Svip";
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
@@ -14,7 +14,11 @@ class Ahead extends Component {
     }
 
     render() {
-        console.log(this.props)
+        let { priorList } = this.props
+        // console.log(priorList)
+        if (priorList && priorList.length) {
+            this.handleInitialization()
+        }
         return (
             <section className="vip-ahead">
                 <a href="#">
@@ -31,9 +35,9 @@ class Ahead extends Component {
 
                 </a>
 
-                <div className="swiper-container home-banner-wrap">
+                <div className="swiper-container home-banner-wrap" ref='swiper-container'>
                     <div className="swiper-wrapper">
-                        {this.state.priorList.map(v=>
+                        {priorList.map(v =>
                             <div className={"swiper-slide"} key={v.schedular_id}>
                                 <div className="vip-ahead__list">
 
@@ -41,7 +45,7 @@ class Ahead extends Component {
                                         <a href="" className="vip-ahead__list__item__wrap">
                                             <img
                                                 src={v.pic}
-                                                className="vip-ahead__list__item__wrap__pic"/>
+                                                className="vip-ahead__list__item__wrap__pic" />
                                         </a>
                                     </div>
                                     <div className="vip-ahead__list__info">
@@ -63,39 +67,37 @@ class Ahead extends Component {
                             </div>
                         )}
                     </div>
-                    <div  className="swiper-pagination vip-pagination swiper-pagination-bullets"></div>
+                    <div className="swiper-pagination vip-pagination swiper-pagination-bullets"></div>
                 </div>
             </section>
         )
     }
 
+    handleInitialization() {
+        let item = this.refs['swiper-container']
+        new Swiper(item, {
+            loop: true,
+            speed: 1000,
+            autoplay: {
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination'
+            }
+        })
+    }
+
+
     componentDidMount() {
         this.props.getSvipList();
         console.log(this.props)
     }
-    componentWillUnmount() {
-        if (this.swiper) { // 销毁swiper
-            this.swiper.destroy()
-        }
-    }
+    // componentWillUnmount() {
+    //     if (this.swiper) { // 销毁swiper
+    //         this.swiper.destroy()
+    //     }
+    // }
 
-    componentWillReceiveProps(nextProps) {
-        console.log(nextProps.priorList)
-        this.setState({
-            priorList: nextProps.priorList
-        }, () => {
-            new Swiper('.swiper-container', {
-                loop: true,
-                speed:1000,
-                autoplay: {
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination'
-                }
-            })
-        })
-    }
 }
 
 function mapStateToProps(state) {
