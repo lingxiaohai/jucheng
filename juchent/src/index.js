@@ -4,6 +4,7 @@ import "./assets/css/index.css"
 import App from './App';
 import store from "./store"
 import * as serviceWorker from './serviceWorker';
+import  "lib-flexible"
 import {Provider} from "react-redux"
 ReactDOM.render( <Provider store={store}><App /></Provider>, document.getElementById('root'));
 

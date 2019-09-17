@@ -10,8 +10,7 @@ class App extends React.Component{
     render() {
 
         return(
-            <div id={"app"}>
-                <div className="home page">
+
               <Router>
                   <Switch>
                   {
@@ -21,8 +20,7 @@ class App extends React.Component{
                   }
                   </Switch>
               </Router>
-                </div>
-            </div>
+
         )
     }
 }
