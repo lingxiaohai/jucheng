@@ -29,29 +29,5 @@ class showsLibrary extends React.Component{
     }
 
 }
-// function mapStateToProPs(state,props) {
-//
-//     return{
-//         show_category_list:state.ShowTypeList.show_category_list, //演出类型
-//         category_list:state.ShowTypeList.category_list,
-//         category_list_page:state.ShowTypeList.category_list_page,
-//     }
-// }
-// function mapDispatchToProps(dispatch,props) {
-//
-//     return{
-//         async getcategorytypeList(){
-//             const {data} = await axios.get("/ShowTpeList/Search/getShowCategory?version=6.0.5&referer=2");
-//             dispatch(changeShowcategoryTypeList(data.data.show_category_list))
-//         },
-//
-//         async getcategoryList(id=0){
-//             console.log(id);
-//             console.log(`/ShowList/Show/Search/getShowList?category=${id}&city_id=5&page=${this.category_list_page}&keywords=&version=6.0.5&referer=2`);
-//             const {data} = await axios.get(`/ShowList/Show/Search/getShowList?category=${id}&city_id=5&page=${this.category_list_page}&keywords=&version=6.0.5&referer=2`);
-//             dispatch(changeShowcategoryList(data.data.list));
-//         },
-//
-//     }
-// }
+
 export  default connect()(showsLibrary)

@@ -6,8 +6,9 @@ import "../assets/css/tab.css"
 
     render() {
         return(
-            <>
-                {routerArr[0].Children.map((v,index)=>
+            <div id={"app"}>
+                <div className="home page">
+                {routerArr[1].Children.map((v,index)=>
                     <Route {...v}  key={index}></Route>
                 )}
 
@@ -43,7 +44,12 @@ import "../assets/css/tab.css"
 
             </div>
 
-            </>
+
+
+
+                </div>
+            </div>
+
         )
     }
  }

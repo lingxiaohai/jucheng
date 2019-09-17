@@ -4,10 +4,13 @@ import Search from "../components/home/Search"
 import "../assets/css/main.css"
 import {connect}  from "react-redux"
 import {bindActionCreators} from "redux"
+import pageList from "../store/actionCreator/home"
+import Slideshow from "../components/home/Slideshow"
+import Advertion from "../components/home/Advertion"
  class Page extends Component{
 
     render() {
-        console.log(this.props)
+
         return(
             <>
                <Search></Search>
@@ -15,26 +18,42 @@ import {bindActionCreators} from "redux"
                 <section className={"main-wrap__content"}>
                     <div className="banner-wrap home-banner-wrap">
                         <div className="swiper-container swiper-container-horizontal">
-
+                            <Slideshow swiperList={this.props}></Slideshow>
                         </div>
                     </div>
+                    <section className="advertion-wrap">
+                        <div className="label-item">
+                        <Advertion list={this.props}></Advertion>
+                        </div>
+                    </section>
                 </section>
 
                 </main>
-                <input type="button" value={"跳转演唱会"} onClick={()=>{this.props.history.push("/show/showsLibrary")}}/>
+
+                <input type="button" value={"跳转演唱会"} onClick={()=>{this.props.history.push("/Show")}}/>
             </>
         )
     }
-}
+
+
+     componentDidMount() {
+         this.props.getSwiper();
+
+         this.setState({
+             swiperList:this.props
+         })
+
+    }
+ }
+
 function mapStateToProps(state,props) {
-    console.log(state)
+
     return{
-        state
+        newsList:state.SwiperList
     }
 }
 function mapDidToProps(dispatch) {
-    return{
+    return bindActionCreators(pageList,dispatch);
 
-    }
 }
 export default connect(mapStateToProps,mapDidToProps)(Page)

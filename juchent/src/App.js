@@ -8,18 +8,19 @@ import { bindActionCreators} from "redux"
 class App extends React.Component{
 
     render() {
+
         return(
-            <div id={"app"}>
-                <div className="home page">
+
               <Router>
+                  <Switch>
                   {
                       routerArr.map((v,index)=>
                        <Route {...v} key={index}></Route>
                       )
                   }
+                  </Switch>
               </Router>
-                </div>
-            </div>
+
         )
     }
 }

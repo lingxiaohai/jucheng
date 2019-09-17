@@ -3,7 +3,7 @@ import pagList from "../../state/home";
 export default function (state=pagList,{type,payload}) {
     state=JSON.parse(JSON.stringify(state));
     if(type===GENGAI_SWIPERLIST){
-        state=payload
+         state=Object.assign({},payload);
     }
     return state
 }
