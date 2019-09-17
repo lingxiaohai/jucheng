@@ -4,8 +4,23 @@ import Login from "../views/Login"
 import Theater from "../views/Theater"
 import Page from "../views/Page"
 import Cart from "../views/Cart"
-
+import Advertion from "../views/Advertion"
+import Scores from "../views/Scores"
 const route =[
+    {
+        path:"/Scores/index",
+        name:"Scores",
+        component:Scores
+    }
+    ,
+    {
+        path:"/show/showsLibrary",
+        name:"show/showsLibrary",
+        component:Advertion
+
+
+    },
+
     {
         path:"/Login",
         name:"login",

@@ -10,20 +10,23 @@ import Advertion from "../components/home/Advertion"
  class Page extends Component{
 
     render() {
-
+        console.log(this.props)
         return(
             <>
                <Search></Search>
                 <main className={"main-wrap"}>
                 <section className={"main-wrap__content"}>
+
                     <div className="banner-wrap home-banner-wrap">
                         <div className="swiper-container swiper-container-horizontal">
                             <Slideshow swiperList={this.props}></Slideshow>
                         </div>
                     </div>
+
                     <section className="advertion-wrap">
                         <div className="label-item">
-                        <Advertion list={this.props}></Advertion>
+                        <Advertion ></Advertion>
+
                         </div>
                     </section>
                 </section>
