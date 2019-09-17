@@ -12,29 +12,32 @@
 }
 
 /* 轮播图 */
-.banner-wrap .swiper-container{
-    height: 5.22667rem;
-    width: 100%;
-}
+
 .swiper-container {
     margin-left: auto;
     margin-right: auto;
     position: relative;
     overflow: hidden;
     z-index: 1;
+}
+* { touch-action: none; }
+.main-wrap .main-wrap__content .swiper-container{
+    height: 5.22667rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.banner-wrap .swiper-container{
+.banner-wrap__block{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.main-wrap .main-wrap__content .swiper-container slider am-carousel{
     height: 5.22667rem;
     width: 100%;
 }
-.swiper-container {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
+
 /* 结束 */
 
 
@@ -73,6 +76,10 @@
     color: #232323;
     margin-top: .2rem;
 }
+.slider-decorator-0{
+    bottom: 0.3rem !important;
+}
+
 /* 图标结束 */
 
 
@@ -148,9 +155,7 @@
 
 
 
-.swiper-container {
-    padding-bottom: .53333rem;
-}
+
 .swiper-container {
     margin-left: auto;
     margin-right: auto;

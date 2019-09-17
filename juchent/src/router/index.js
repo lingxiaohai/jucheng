@@ -7,6 +7,11 @@ import Cart from "../views/Cart"
 
 const route =[
     {
+        path:"/Login",
+        name:"login",
+        component:Login
+    },
+    {
         path:"/",
         name:"home",
         component:Home,
@@ -34,11 +39,7 @@ const route =[
             }
 
         ]
-    },
-    {
-        path:"/Login",
-        name:"login",
-        component:Login
     }
+
 ];
 export default route

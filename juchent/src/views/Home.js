@@ -7,7 +7,7 @@ import "../assets/css/tab.css"
     render() {
         return(
             <>
-                {routerArr[0].Children.map((v,index)=>
+                {routerArr[1].Children.map((v,index)=>
                     <Route {...v}  key={index}></Route>
                 )}
             <div className={"tabs"}>
