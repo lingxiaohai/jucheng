@@ -12,7 +12,7 @@ export default {
    getjuyuanlist(){
         return async (dispatch)=>{
            const {data}= await axios.get("https://api.juooo.com/theatre/index/getTheatreList?page=1&version=6.0.5&referer=2");
-           console.log(data)
+           console.log(data.data)
            dispatch(changeaddjuyuanlist(data.data))
 
         }

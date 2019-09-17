@@ -3,6 +3,9 @@ import "../assets/css/theatre.css"
 import {bindActionCreators} from "redux"
 import {connect}  from "react-redux"
 import pageList from "../store/actionCreator/juyuan"
+
+import Swiper from 'swiper/dist/js/swiper.js'
+import 'swiper/dist/css/swiper.min.css'
 class Theater extends Component{
 
     render() {
@@ -16,7 +19,7 @@ class Theater extends Component{
 <div className="theater-body">
     <div className="wrapper">
         <div className="theater-list">
-            <ul className="theater-ul">
+            <ul className="theater-ul" style={{paddingInlineStart:'0'}}>
                 {this.props.juyuanList.theatre_list.map((v,i)=>{
                     return(
                         <div key={i}>
@@ -86,8 +89,12 @@ class Theater extends Component{
     }
     componentDidMount() {
         this.props.getjuyuanlist();
-
-
+        var mySwiper=new Swiper(".swiper-container",{
+            loop:true,
+            autoplay:true,
+            width:113, 
+       
+        })
    }
 }
 function mapStateToProps(state,props) {
