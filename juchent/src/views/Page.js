@@ -7,10 +7,11 @@ import {bindActionCreators} from "redux"
 import pageList from "../store/actionCreator/home"
 import Slideshow from "../components/home/Slideshow"
 import Advertion from "../components/home/Advertion"
+import Ahead from "../components/home/Ahead"
  class Page extends Component{
 
     render() {
-        console.log(this.props)
+
         return(
             <>
                <Search></Search>
@@ -26,8 +27,8 @@ import Advertion from "../components/home/Advertion"
                     <section className="advertion-wrap">
                         <div className="label-item">
                         <Advertion ></Advertion>
-
                         </div>
+                        <Ahead></Ahead>
                     </section>
                 </section>
 
