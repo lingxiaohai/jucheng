@@ -1,0 +1,241 @@
+/* * {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+li {
+	list-style: none;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+	font-weight: normal;
+}
+
+input {
+	border: 0;
+}
+ */
+
+
+.lzy-views {
+	width: 100%;
+	height: 100%;
+}
+
+.lzy-navbar {
+	border-bottom: 0.0417rem solid #e7e7e7;
+	width: 100%;
+	height: 45.0559px;
+	line-height: 45.0559px;
+	font-size: 17.4079px;
+	color: #212121;
+	background-color: #fdfdfd;
+	position: relative;
+	z-index:999999;
+}
+
+.lzy-navbar .lzy-navbar-inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 16.3841px 0 15.36px;
+}
+
+.lzy-navbar .lzy-navbar-inner .iconfont {
+	height: 45.0559px;
+	line-height: 45.0559px;
+	margin-right: 0.4167rem;
+	font-size: 20.4799px;
+}
+
+/* 弹出遮罩 */
+.lzy-shadow-bg {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	display: none;
+}
+
+/* 弹框 */
+.lzy-back-wrapper {
+	position: fixed;
+	top: 45.0559px;
+	right: 5.1199px;
+	width: 143.3599px;
+	height: 90.1121px;
+	background: #fff;
+	margin-right: 5.1199px;
+	border-radius: 5.1199px;
+	transition: transform 0.2s cubic-bezier(0, 0, 0.25, 1);
+	display: none;
+	z-index: 99999;
+}
+
+.lzy-back-wrapper .lzy-triangle {
+	width: 0;
+	height: 0;
+	border: 6.144px solid #fff;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -5.1199px;
+	right: 10.2401px;
+	border-radius: 0.0833rem;
+}
+
+.lzy-back-wrapper .lzy-myjuooo,
+.lzy-back-wrapper .lzy-to-home {
+	width: 100%;
+	height: 45.0559px;
+	line-height: 45.0559px;
+	font-size: 14.3359px;
+	padding-left: 48.6401px;
+	display: block;
+	color: #212121;
+}
+
+.lzy-back-wrapper .lzy-to-home {
+	border-bottom: 0.0417rem solid #e7e7e7;
+	background: url(https://m.juooo.com/public/basic/Home/app/app-juooo4.2/images/house-icon.png) no-repeat 17.9201px 14.3359px;
+	background-size: 16.896px 16.3841px;
+}
+
+.lzy-back-wrapper .lzy-myjuooo {
+	background: url(https://m.juooo.com/public/basic/Home/app/app-juooo4.2/images/mine-icon.png) no-repeat 17.9201px 14.3359px;
+	background-size: 15.8719px 15.36px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 背景 */
+.lzy-banner {
+    height: 144.384px;
+    font-size: 12.288px;
+    text-align: center;
+    color: #fff;
+    background: url(https://m.juooo.com/public/basic/Home/app/app-juooo4/images/myjuooo/integral.jpg) 0 0 no-repeat;
+    background-size: 100%;
+}
+.lzy-banner .lzy-rule {
+    float: right;
+    margin-right: 10.2401px;
+    padding-top: 10.2401px;
+	color: #fff;
+	font-size: 12.288px;
+}
+.lzy-banner .lzy-rule .iconfont {
+    padding-right: 5.1199px;
+    color: #fff;
+	font-size: 14.688px;
+}
+.lzy-banner .lzy-text {
+	padding-left: 80px;
+    padding-top: 30.72px;
+}
+.lzy-banner .lzy-num {
+    padding-top: 7.68px;
+    font-size: 36.864px;
+}
+.lzy-banner .lzy-shop-integral {
+    display: inline-block;
+    width: 95.232px;
+    height: 28.6721px;
+    line-height: 28.6721px;
+    border-radius: 4.0961px;
+    padding-left: 18.9439px;
+    margin-top: -4px;
+    color: #ff7919;
+    background: #fff url(https://m.juooo.com/public/basic/Home/app/app-juooo4/images/myjuooo/shop-integral.png) 11.2639px center no-repeat;
+    background-size: 15.36px 14.3359px;
+}
+.lzy-part {
+    color: #999;
+    background: #f6f6f6;
+}
+.lzy-part .lzy-little {
+    margin-left: 16.3841px;
+    font-size: 12.288px;
+    line-height: 43.008px;
+}
+.lzy-part .lzy-part-box {
+    padding: 0 10.2401px;
+    background: #fff;
+}
+.lzy-part .lzy-part-box .lzy-item {
+    position: relative;
+    border-bottom: 0.0417rem solid #e6e6e6;
+    padding: 17.9201px 5.1199px;
+}
+.lzy-part .lzy-part-box .lzy-item .lzy-name {
+    font-size: 15.36px;
+    color: #212121;
+}
+.lzy-part .lzy-part-box .lzy-item .lzy-time {
+    padding-top: 5.1199px;
+    font-size: 13.3121px;
+}
+.lzy-part .lzy-part-box .lzy-item .lzy-num {
+    position: absolute;
+    top: 25.6001px;
+    right: 7.68px;
+    font-size: 17.4079px;
+    color: #ff7919;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

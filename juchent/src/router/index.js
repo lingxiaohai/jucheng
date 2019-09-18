@@ -6,7 +6,38 @@ import Page from "../views/Page"
 import Cart from "../views/Cart"
 import Advertion from "../views/Advertion"
 import Scores from "../views/Scores"
+import Myjuooo from "../views/Myjuooo"
+import MyIntegral from "../views/MyIntegral"
+import IntegralRule from "../views/IntegralRule"
+import MyjuoooIndex from "../views/MyjuoooIndex.js"
 const route =[
+    {
+        path : "/Myjuooo/integralRule",
+        name : "integralRule",
+        component : IntegralRule
+    }
+    ,
+    {
+        path : "/myjuooo",
+        component : Myjuooo,
+        Children : [
+            {
+                path : "/myjuooo/myintegral",
+                name : "myintegral",
+                component : MyIntegral,
+                
+            }
+            ,
+            {
+                path : "/myjuooo",
+                name : "myjuoooIndex",
+                component : MyjuoooIndex,
+                exact : true
+            }
+        ]
+
+    }
+    ,
     {
         path:"/Scores/index",
         name:"Scores",
@@ -17,8 +48,6 @@ const route =[
         path:"/show/showsLibrary",
         name:"show/showsLibrary",
         component:Advertion
-
-
     },
 
     {
