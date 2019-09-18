@@ -15,10 +15,10 @@ class Ahead extends Component {
 
     render() {
         let { priorList } = this.props
-        // console.log(priorList)
-        if (priorList && priorList.length) {
-            this.handleInitialization()
-        }
+
+        // if (priorList && priorList.length>1) {
+
+        // }
         return (
             <section className="vip-ahead">
                 <a href="#">
@@ -67,30 +67,39 @@ class Ahead extends Component {
                             </div>
                         )}
                     </div>
-                    <div className="swiper-pagination vip-pagination swiper-pagination-bullets"></div>
+                    <div className="swiper-pagination vip-pagination swiper-pagination-bullets" ref={"swiper-pagination"}></div>
                 </div>
             </section>
         )
     }
 
     handleInitialization() {
-        let item = this.refs['swiper-container']
+        let item = this.refs['swiper-container'];
+        let page = this.refs['swiper-pagination'];
+
+
+        setTimeout(()=>{
         new Swiper(item, {
             loop: true,
             speed: 1000,
             autoplay: {
-                disableOnInteraction: false,
+                disableOnInteraction:false,
             },
+            observeParents: true,
+            observer: true,
             pagination: {
-                el: '.swiper-pagination'
+                el: page,
+                type: 'bullets',
             }
         })
+        },500)
     }
 
 
+
     componentDidMount() {
-        this.props.getSvipList();
-        console.log(this.props)
+        this.props.getSvipList(this.props);
+        this.handleInitialization()
     }
     // componentWillUnmount() {
     //     if (this.swiper) { // 销毁swiper

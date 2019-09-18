@@ -11,7 +11,7 @@ export default {
    getSwiper() {
       return async (dispatch) => {
          const { data } = await axios.get("/home/getClassifyHome?city_id=0");
-         console.log(data)
+
          if (data.code === '200') {
             dispatch(changeSwiperList(data.data))
          } else {

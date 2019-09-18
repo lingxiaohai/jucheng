@@ -1,13 +1,17 @@
-import React, { Component } from "react"
+import React, {Component} from "react"
 import Search from "../components/home/Search"
 import "../assets/css/home.css"
 import "../assets/css/main.css"
-import { connect } from "react-redux"
-import { bindActionCreators } from "redux"
+import {connect} from "react-redux"
+import {bindActionCreators} from "redux"
 import pageList from "../store/actionCreator/home"
 import Slideshow from "../components/home/Slideshow"
 import Advertion from "../components/home/Advertion"
 import Ahead from "../components/home/Ahead"
+import Operation from "../components/home/Operation"
+import Hotblock from "../components/home/Hotblock"
+import Category from "../components/home/Category"
+import Vipblock from "../components/home/Vipblock"
 class Page extends Component {
 
     render() {
@@ -24,10 +28,15 @@ class Page extends Component {
 
                         <section className="advertion-wrap">
                             <div className="label-item">
-                                <Advertion ></Advertion>
+                                <Advertion ifyList={this.props.newsList.classify_list}></Advertion>
                             </div>
                             <Ahead></Ahead>
+                            <Operation operation={this.props.newsList.operation_list}></Operation>
+                            <Hotblock></Hotblock>
+
                         </section>
+                        <Vipblock></Vipblock>
+                        <Category></Category>
                     </section>
 
                 </main>
@@ -53,8 +62,10 @@ function mapStateToProps(state, props) {
         newsList: state.SwiperList
     }
 }
+
 function mapDidToProps(dispatch) {
     return bindActionCreators(pageList, dispatch);
 
 }
+
 export default connect(mapStateToProps, mapDidToProps)(Page)

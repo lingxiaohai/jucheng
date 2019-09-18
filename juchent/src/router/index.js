@@ -6,7 +6,9 @@ import Page from "../views/Page"
 import Cart from "../views/Cart"
 import Advertion from "../views/Advertion"
 import Scores from "../views/Scores"
+
 const route =[
+
     {
         path:"/Scores/index",
         name:"Scores",
