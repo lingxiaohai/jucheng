@@ -8,10 +8,9 @@ import "../assets/css/tab.css"
         return(
             <div id={"app"}>
                 <div className="home page">
-                {routerArr[1].Children.map((v,index)=>
+                {routerArr[3].Children.map((v,index)=>
                     <Route {...v}  key={index}></Route>
                 )}
-
             <div className={"tabs"}>
                 <nav className={'nav'}>
                 <div className={"nav-item"}>

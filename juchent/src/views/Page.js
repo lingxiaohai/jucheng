@@ -30,7 +30,7 @@ import Advertion from "../components/home/Advertion"
 
                 </main>
 
-                <input type="button" value={"跳转演唱会"} onClick={()=>{this.props.history.push("/Show")}}/>
+                <input type="button" value={"跳转演唱会"} onClick={()=>{this.props.history.push("/show/showsLibrary")}}/>
             </>
         )
     }

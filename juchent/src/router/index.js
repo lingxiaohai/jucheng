@@ -5,13 +5,27 @@ import Theater from "../views/Theater"
 import Page from "../views/Page"
 import Cart from "../views/Cart"
 import ShowsLibrary from '../views/ShowsLibrary'
-import Show from '../views/Show'
+
 const route =[
     {
         path:"/Login",
         name:"login",
         component:Login
     },
+
+    {
+        path:"/Login",
+        name:"login",
+        component:Login
+    },
+    {
+        path:"/show/showsLibrary",
+        name:"showslibrary",
+        component:ShowsLibrary,
+
+    },
+
+
     {
         path:"/",
         name:"home",
@@ -37,26 +51,13 @@ const route =[
                 path:"/Theater",
                 name:"Theater",
                 component:Theater
-            }
+            },
+
+
 
         ]
 
     },
-    {
-        path:"/Login",
-        name:"login",
-        component:Login
-    },
-    {
-        path:"/show/showsLibrary",
-        name:"showslibrary",
-        component:ShowsLibrary
-    },
-    {
-        path:"/Show",
-        name:"Show",
-        component:Show
-    }
 
 ];
 export default route

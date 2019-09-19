@@ -4,15 +4,13 @@ import {bindActionCreators} from 'redux'
 import axios from 'axios'
 import store from '../../store/index'
 import '../../assets/css/ShowLibrary.css'
-import {changeShowcategoryList} from "../../store/actionCreator/Show";
+import Creator,{changeShowcategoryList} from "../../store/actionCreator/Show";
 
 class ShowList extends React.Component{
-    render() {
-        console.log(this.props.id)
 
+    render() {
         return(
             <section id="qxy_recommend_wrap">
-
                 <ul>
 
                     {
@@ -29,30 +27,29 @@ class ShowList extends React.Component{
                             </li>
                         ))
                     }
+                    <input type="button" value={"加载更多数据"} style={{background:"red"}} onClick={this.props.getcategoryList.bind(this.props,{id:this.props.id,index:this.props.category_list_page+1,cityid:this.props.cityid})}/>
                 </ul>
 
             </section>
         )
     }
     componentDidMount() {
-        this.props.getcategoryList();
+        this.props.getcategoryList({index:1});
     }
 }
 
 function mapStateToProPs(state,props) {
+
     return{
+        cityList: state.ShowTypeList.cityList,
+        show_category_list:state.ShowTypeList.show_category_list, //演出类型
         category_list:state.ShowTypeList.category_list,
+        category_list_page:state.ShowTypeList.category_list_page,
+        id:state.ShowTypeList.id,
+        cityid:state.ShowTypeList.cityid,
     }
 }
 function mapDispatchToProps(dispatch,props) {
-
-    return{
-        async getcategoryList(){
-            // console.log(`/ShowList/Show/Search/getShowList?category=${id}&city_id=5&page=${this.category_list_page}&keywords=&version=6.0.5&referer=2`);
-            const {data} = await axios.get(`/ShowList/Show/Search/getShowList?category=${this.id}&city_id=5&page=1&keywords=&version=6.0.5&referer=2`);
-            dispatch(changeShowcategoryList(data.data.list));
-        },
-
-    }
+  return bindActionCreators(Creator,dispatch)
 }
 export default connect(mapStateToProPs,mapDispatchToProps)(ShowList)
