@@ -1,23 +1,25 @@
 import React,{Component} from 'react';
 import "../assets/css/myintegral.css"
+
+
 class MyIntegral extends Component{
     render(){
         return(
             <div>
               <div className="lzy-views">
-					<header className="lzy-navbar">
-						<div className="lzy-navbar-inner">
-							<div className="lzy-left">
-								<a href="#" className="lzy-link"><span className="iconfont icon-zuo"></span></a>
-							</div>
-							<div className="lzy-center">
-								积分商城
-							</div>
-							<div className="lzy-right">
-								<a href="#"><span className="iconfont icon-gengduo"></span></a>
-							</div>
-						</div>
-					</header>
+                <header className="lzy-navbar">
+                        <div className="lzy-navbar-inner">
+                            <div className="lzy-left">
+                                <a href="#" className="lzy-link"><span className="iconfont icon-zuo"></span></a>
+                            </div>
+                            <div className="lzy-center">
+                                积分商城
+                            </div>
+                            <div className="lzy-right">
+                                <a href="#"><span className="iconfont icon-gengduo"></span></a>
+                            </div>
+                        </div>
+                    </header>
 					<div className="lzy-shadow-bg lzy-js-shadow-bg"></div>
 					<div className="lzy-back-wrapper">
 						<div className="lzy-triangle"></div>
