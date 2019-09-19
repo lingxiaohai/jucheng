@@ -1,5 +1,5 @@
 import React,{Component} from "react"
-
+import CCCart from "../components/cart/CCCart";
 export default class Cart extends Component{
 
     componentWillMount() {
@@ -10,7 +10,7 @@ export default class Cart extends Component{
     render() {
         return(
             <div>
-                cart
+                <CCCart></CCCart>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 import React,{Component} from "react"
-
+import Mys from "../components/My/Mys";
 export default class My extends Component{
 
     componentWillMount() {
@@ -11,7 +11,7 @@ export default class My extends Component{
     render() {
         return(
             <div>
-                我的
+                <Mys></Mys>
             </div>
         )
     }
