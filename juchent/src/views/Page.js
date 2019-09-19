@@ -1,59 +1,77 @@
-import React,{Component} from "react"
+import React, {Component} from "react"
 import Search from "../components/home/Search"
- import "../assets/css/home.css"
+import "../assets/css/home.css"
 import "../assets/css/main.css"
-import {connect}  from "react-redux"
+import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import pageList from "../store/actionCreator/home"
 import Slideshow from "../components/home/Slideshow"
 import Advertion from "../components/home/Advertion"
- class Page extends Component{
+import Ahead from "../components/home/Ahead"
+import Operation from "../components/home/Operation"
+import Hotblock from "../components/home/Hotblock"
+import Category from "../components/home/Category"
+import Vipblock from "../components/home/Vipblock"
+class Page extends Component {
 
     render() {
-
-        return(
-            <>
-               <Search></Search>
+        return (
+            <React.Fragment>
+                <Search></Search>
                 <main className={"main-wrap"}>
-                <section className={"main-wrap__content"}>
-                    <div className="banner-wrap home-banner-wrap">
-                        <div className="swiper-container swiper-container-horizontal">
-                            <Slideshow swiperList={this.props}></Slideshow>
+                    <section className={"main-wrap__content"}>
+                        <div className="banner-wrap home-banner-wrap">
+                            <div className="swiper-container swiper-container-horizontal">
+                                <Slideshow swiperList={this.props}></Slideshow>
+                            </div>
                         </div>
-                    </div>
-                    <section className="advertion-wrap">
-                        <div className="label-item">
-                        <Advertion list={this.props}></Advertion>
-                        </div>
+
+                        <section className="advertion-wrap">
+                            <div className="label-item">
+                                <Advertion ifyList={this.props.newsList.classify_list}></Advertion>
+                            </div>
+                            <Ahead></Ahead>
+                            <Operation operation={this.props.newsList.operation_list}></Operation>
+                            <Hotblock></Hotblock>
+
+                        </section>
+                        <Vipblock></Vipblock>
+                        <Category></Category>
                     </section>
-                </section>
 
                 </main>
+<<<<<<< HEAD
 
                 <input type="button" value={"跳转演唱会"} onClick={()=>{this.props.history.push("/show/showsLibrary")}}/>
             </>
+=======
+            </React.Fragment>
+
+>>>>>>> 252b4c4bfbca8081146d3c0bfa88eae93fa8e682
         )
     }
 
 
-     componentDidMount() {
-         this.props.getSwiper();
+    componentDidMount() {
+        this.props.getSwiper();
 
-         this.setState({
-             swiperList:this.props
-         })
+        this.setState({
+            swiperList: this.props
+        })
 
-    }
- }
-
-function mapStateToProps(state,props) {
-
-    return{
-        newsList:state.SwiperList
     }
 }
+
+function mapStateToProps(state, props) {
+
+    return {
+        newsList: state.SwiperList
+    }
+}
+
 function mapDidToProps(dispatch) {
-    return bindActionCreators(pageList,dispatch);
+    return bindActionCreators(pageList, dispatch);
 
 }
-export default connect(mapStateToProps,mapDidToProps)(Page)
+
+export default connect(mapStateToProps, mapDidToProps)(Page)

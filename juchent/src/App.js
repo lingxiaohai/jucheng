@@ -10,7 +10,7 @@ class App extends React.Component{
     render() {
 
         return(
-
+              <>
               <Router>
                   <Switch>
                   {
@@ -20,7 +20,7 @@ class App extends React.Component{
                   }
                   </Switch>
               </Router>
-
+            </>
         )
     }
 }

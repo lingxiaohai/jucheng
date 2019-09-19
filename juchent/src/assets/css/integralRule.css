@@ -1,0 +1,222 @@
+/* * {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+li {
+	list-style: none;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+	font-weight: normal;
+}
+input {
+	border: 0;
+}
+body {
+	font-family: Arial, "微软雅黑", sans-serif;
+	font-size: 0.59733rem;
+	color: #666;
+	background-color: #f6f6f6;
+} */
+
+.l-views {
+	width: 100%;
+	height: 100%;
+}
+
+.l-navbar {
+	border-bottom: 0.0417rem solid #e7e7e7;
+	width: 100%;
+	height: 45.0559px;
+	line-height: 45.0559px;
+	font-size: 17.4079px;
+	color: #212121;
+	background-color: #fdfdfd;
+	position: relative;
+	z-index:999999;
+}
+
+.l-navbar .l-navbar-inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 16.3841px 0 15.36px;
+}
+
+.l-navbar .l-navbar-inner .iconfont {
+	height: 45.0559px;
+	line-height: 45.0559px;
+	margin-right: 0.4167rem;
+	font-size: 20.4799px;
+}
+
+/* 弹出遮罩 */
+.l-shadow-bg {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	display: none;
+}
+
+/* 弹框 */
+.l-back-wrapper {
+	position: fixed;
+	top: 45.0559px;
+	right: 5.1199px;
+	width: 143.3599px;
+	height: 90.1121px;
+	background: #fff;
+	margin-right: 5.1199px;
+	border-radius: 5.1199px;
+	transition: transform 0.2s cubic-bezier(0, 0, 0.25, 1);
+	display: none;
+	z-index: 99999;
+}
+
+.l-back-wrapper .l-triangle {
+	width: 0;
+	height: 0;
+	border: 6.144px solid #fff;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -5.1199px;
+	right: 10.2401px;
+	border-radius: 0.0833rem;
+}
+
+.l-back-wrapper .l-myjuooo,
+.l-back-wrapper .l-to-home {
+	width: 100%;
+	height: 45.0559px;
+	line-height: 45.0559px;
+	font-size: 14.3359px;
+	padding-left: 48.6401px;
+	display: block;
+	color: #212121;
+}
+
+.l-back-wrapper .l-to-home {
+	border-bottom: 0.0417rem solid #e7e7e7;
+	background: url(https://m.juooo.com/public/basic/Home/app/app-juooo4.2/images/house-icon.png) no-repeat 17.9201px 14.3359px;
+	background-size: 16.896px 16.3841px;
+}
+
+.l-back-wrapper .l-myjuooo {
+	background: url(https://m.juooo.com/public/basic/Home/app/app-juooo4.2/images/mine-icon.png) no-repeat 17.9201px 14.3359px;
+	background-size: 15.8719px 15.36px;
+}
+/* 规则 */
+.l-panel-box {
+    padding: 10.2401px;
+}
+.l-panel-box .l-panel-VIP {
+    margin-bottom: 7.68px;
+    border-bottom: 1px solid #ccc;
+    padding: 15.36px 5.1199px 10.2401px;
+    line-height: 23.04px;
+}
+.l-panel-box .l-title {
+    padding-top: 0.53333rem;
+    font-size: 14px;
+    color: #212121;
+}
+.l-panel-box .title-text {
+    padding-top: 0.32rem;
+    font-size: 13.3121px;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
