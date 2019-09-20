@@ -4,7 +4,7 @@ import { Drawer, Button, Radio } from 'antd';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import Creator from '../../store/actionCreator/Show/index'
-import axios from 'axios'
+
  class CityList extends React.Component{
     constructor(){
         super()
@@ -28,6 +28,7 @@ import axios from 'axios'
 
 
     render() {
+
         return (
             <div
             >

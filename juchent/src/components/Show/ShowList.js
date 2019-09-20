@@ -50,7 +50,6 @@ function mapStateToProPs(state,props) {
         category_list:state.ShowTypeList.category_list,
         category_list_page:state.ShowTypeList.category_list_page,
         id:state.ShowTypeList.id,
-
     }
 }
 function mapDispatchToProps(dispatch,props) {
