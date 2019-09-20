@@ -13,8 +13,19 @@ import Myjuooo from "../views/Myjuooo"
 import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
 import MyjuoooIndex from "../views/MyjuoooIndex.js"
-
+import SelectCity from "../views/SelectCity"
+import Search from "../views/Search"
 const route =[
+    {
+      path:"/search/index/",
+      name:"search",
+      component:Search
+    },
+    {
+        path:"/index/selectCity",
+        name:"selectCity",
+        component:SelectCity
+    },
 
     {
         path : "/Myjuooo/integralRule",

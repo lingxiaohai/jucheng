@@ -17,7 +17,7 @@ class Hotblock extends React.Component{
             <section className="hot-block">
                 <div className="hot-block__lab">
                     <h3 className="hot-block__lab__title">热门演出</h3>
-                    <a className="hot-block__lab__arrow">
+                    <a className="hot-block__lab__arrow" >
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAALVBMVEUAAABmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmaTgChpAAAAD3RSTlMA/Aa1qrzcwa+ezcijk5JAYXVXAAAAVUlEQVQoz2MYtoDNAIsghzA2pYEOWASZRbApNWzAIqiKTSlT4QEsouqS2JQGXsAiqpVApCDTxgeYgtoy2OyZQJyLmAqxhAirBLbwcCAy5NgaGIYzAADnxQppL/x7ngAAAABJRU5ErkJggg=="
                             alt="" />

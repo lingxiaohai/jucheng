@@ -387,7 +387,7 @@
 /* 热门演出 */
 .hot-block {
     padding-top: 19.7332px;
-    padding-left: 14.8px;
+
     padding-bottom: 34.5332px;
     width: 100%;
 }
@@ -734,3 +734,181 @@
     color: #232323;
     margin-top: .26667rem;
 }
+
+.recommend-block {
+    padding: 0 .4rem;
+    margin-top: .8rem;
+}
+
+.recommend-block__wrap{
+    overflow: hidden;
+}
+.recommend-block__wrap__title{
+    font-size: .53333rem;
+    font-weight: 700;
+    color: #232323;
+    float: left;
+}
+.recommend-list{
+    margin-top: .53333rem;
+}
+.recommend-list li{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: .86667rem;
+    position: relative;
+}
+.recommend-list li .show-icon {
+    width: 2.93333rem;
+    height: 4rem;
+    border-radius: .10667rem;
+    border: 1px solid #ebebeb;
+    position: relative;
+    overflow: hidden;
+}
+.recommend-list li .show-icon a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.juooo_sponsor .logo_i {
+    position: absolute;
+    left: .10667rem;
+    top: -.02667rem;
+    width: .77333rem;
+    height: .93333rem;
+    display: block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABGCAYAAACdW4eSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjY3RkQzRjA2RjhBNzExRTZCN0NDOTAwMzNFMzZCRDE4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjY3RkQzRjA3RjhBNzExRTZCN0NDOTAwMzNFMzZCRDE4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjdGRDNGMDRGOEE3MTFFNkI3Q0M5MDAzM0UzNkJEMTgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjdGRDNGMDVGOEE3MTFFNkI3Q0M5MDAzM0UzNkJEMTgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Jh+IzAAAEn0lEQVR42uxaTWgTQRSebaKCiKBGD8WTCP6AeBSkWhX/C0oVxEotKPTSk0eh4EEoePTkpaBQitWCVgQVFbTVInhUwZ+7eND4A4pimx/fN523bMaZze4maZJmBj6Sbmdn53vfe29m3sabOdhRFC3Q2kSLNEfUEXVEHVFH1BF1RB1RR9QRdURbiajXuU8sevBcfsbpb2upwSGRvjzsfwdsLT06Efr/ci09XxYF6fT5CyXXCtPPhMhkJAFv02aRH75iVqPnjPBWZURuaFD2bevYaX1O8WtW5Hq76+e6xanHYvbQDoncpYvyWp4mLo1AJDE5r32tr3DJJLuOzBmFx/rw3h8riPzI1WSKsgqYGCZqcqfiu7f+hG3qwX1haakKjZXqPuFPHCqiL1RL9Z31jWBS0x9/w0ZrSOA5sWMUE4L1TCTloEQSbqTHLKvHZKS1iRBISAOQu7Jx0Bf9mKT+LKj533MDiqLhvsoUJcuF3YzJekgSZJCcwRje6jUl5OGWbHFdEZCFEWYD45iSj+49JWOMXZOIRRQPwaRsN/qD37sr1YCquhowlO+6pAKUNCUK3xjkpujLSnGC4jAwJTRJAte06zxGWaJ4CFyzXIMh4F66qogtjkt4BfpgvLDlhl2Sm0xQgbCQIaGewZka40sjov+5/njrKCeAMDfRYxXqBSfVtm27bygYg5W0ZUyebOS1nMKCx8xPjIvil8+ha7yZKFk/LDZtcQNVeTJw08L0ZFWXKGR5GcdYojT1MAdcT/UPGAmnTRZjFeI0JBNeyLEeInZtCc66NBhUDbprML5BGs/QY9GWA7w4lfpy66qtf3AyMrbgdgFFMGmRzRpjDJmak1rUppOPvQWEUpW2vNrGcXaVOyELybAEw4pG9byyRPW9ZdgGolx8IcEFW9CFg99ZkbAMLedGyxpgC6VgMk1HUSBfhUQStn7GccHEhwr3Ns0RdUQd0QVHtFyNqNb3zxtRrK9YZ03lkAXnutjJ6CeZRmiJ19GkLhbcBJh2S3Gre5F3ZklvtO1a+EAcZVJ6H5yDcUTUr/OYTZ11Ec9RY7qSInZdiSKOZQFuYnzu73Xr5UkmtJKRUNm6EtXLqTinoiRiP9xPyphOkugSxygXnOMkK5Rn+PzIapYUrDMZUXz5wjwgKS2Xr/4BOjbuEvmYR8XERG011KjJSFeTC3KmMUvqwwndN10vt9UrB/r7lbDzcdPudWXNqAISTZF1ZSxn7ZsBjuWCLXZr6bpRKnNhJU25TVQVwmCCYmL6awfcE7f86kopjqgj6og6oo6oI+qIOqItT3S+jmk/CPcVeBOMl66HCV2E5TU/QNRwr/uNcJtwi/CEMGPpt4Swh3CccIywohmI/iLgVxpjhEch5EQI6QOEHgJ+G7e0kYj+JTxU5EDyd5XmtkyRBen9hMX1IIq3/VOE68o9v9c4xFYqtz5F6EySROMSfUUYIdwgfKpTAm0n9CpsqSbRj0q5UcKbBls1thL6CCeVAWIT/amyJcg9JRQafJlMEfYSThOOqvi2Es2rpAJydwh/mnRvAJLdSundygiS6Gv6ROXpZh3jrpbxjATW90+AAQDmhWCm8T695gAAAABJRU5ErkJggg==) 50% no-repeat;
+    background-size: 100%;
+}
+.recommend-list li .item-desc {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: .4rem;
+    color: #232323;
+    padding-top: .13333rem;
+}
+.recommend-list li .show-date{
+    font-size: .32rem;
+    height: .64rem;
+    line-height: .64rem;
+    letter-spacing: 1px;
+    color: #666;
+}
+.recommend-list li .show-date strong {
+    color: #232323;
+    font-size: .42667rem;
+}
+.recommend-list li .show-date {
+    font-size: .32rem;
+    height: .64rem;
+    line-height: .64rem;
+    letter-spacing: 1px;
+    color: #666;
+}
+.recommend-list li .item-desc a {
+    display: block;
+}
+.recommend-list li .item-desc .title {
+    width: 100%;
+    font-size: .45333rem;
+    line-height: .6rem;
+    min-height: .6rem;
+    max-height: 1.2rem;
+    margin-top: .33333rem;
+}
+.recommend-list li .venue{
+    margin-top: .33333rem;
+    width: 5.33333rem;
+    font-size: .32rem;
+    height: .64rem;
+    line-height: .64rem;
+    color: #666;
+}
+.recommend-list li .price {
+    font-size: .29333rem;
+    color: #999;
+    height: .48rem;
+    line-height: .48rem;
+    margin-top: .26667rem;
+}
+.recommend-list li .price strong{
+    font-size: .42667rem;
+    letter-spacing: 0;
+    margin-right: .13333rem;
+    font-weight: 400;
+}
+.recommend-list li .price{
+    font-size: .29333rem;
+    color: #999;
+    height: .48rem;
+    line-height: .48rem;
+    margin-top: .26667rem;
+}
+.recommend-list li .item-desc a{
+    color: #232323;
+
+}
+.recommend-list li .show-date strong {
+    color: #232323;
+    font-size: 0.42667rem;
+    font-weight: 600;
+}
+
+
+.recommend-logoding {
+    border: 1px solid #eee;
+    border-radius: 50%;
+    border-top: 1px solid red;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    margin: 0 auto
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.recommend-block__more {
+    display: block;
+    margin: 0 auto;
+    width: 4.24rem;
+    height: .96rem;
+    line-height: .96rem;
+    border-radius: .10667rem;
+    border: 1px solid #ff6743;
+    font-size: .4rem;
+    color: #ff6743;
+    background: #fff
+}
+.recommend-block__more__icon{
+    width: .13333rem;
+    height: .26667rem;
+    margin-left: .13333rem;
+    vertical-align: initial;
+}
+.recommend-block__more img{
+
+    display: inline-block
+}
+
+
+

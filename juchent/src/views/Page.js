@@ -12,6 +12,8 @@ import Operation from "../components/home/Operation"
 import Hotblock from "../components/home/Hotblock"
 import Category from "../components/home/Category"
 import Vipblock from "../components/home/Vipblock"
+import Recommend from "../components/home/Recommend"
+import {withRouter} from "react-router-dom"
 class Page extends Component {
 
     render() {
@@ -37,6 +39,7 @@ class Page extends Component {
                         </section>
                         <Vipblock></Vipblock>
                         <Category></Category>
+                        <Recommend></Recommend>
                     </section>
 
                 </main>
@@ -68,4 +71,4 @@ function mapDidToProps(dispatch) {
 
 }
 
-export default connect(mapStateToProps, mapDidToProps)(Page)
+export default withRouter(connect(mapStateToProps, mapDidToProps)(Page))

@@ -48,8 +48,8 @@ class Theater extends Component {
                                                                 {
                                                                     v.showList.map((j, i) => {
                                                                         return (
-                                                                            <div key={i}>
-                                                                                <div className="swiper-slide" id="lis" >
+
+                                                                                <div className="swiper-slide" id="lis" key={i} >
                                                                                     <div className="theater-show-date">
                                                                                         <p className="show-date">{j.show_time}</p>
                                                                                         <span className="dot"></span>
@@ -61,17 +61,8 @@ class Theater extends Component {
                                                                                     </a>
 
                                                                                 </div>
-                                                                                <div className="swiper-slide" id="lis">
-                                                                                    <div className="theater-show-date">
-                                                                                        <p className="show-date"></p>
-                                                                                        <span className="dot"></span>
-                                                                                    </div>
-                                                                                    <a href="https://m.juooo.com/theatre/showList?tid=2"
-                                                                                       className="theater-show-pic">
-                                                                                        <p className="swipertext">查看更多></p>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
+
+
                                                                         )
                                                                     })
                                                                 }
@@ -97,15 +88,23 @@ class Theater extends Component {
 
     componentDidMount() {
         this.props.getjuyuanlist();
-        var mySwiper = new Swiper(".swiper-container", {
+
+
+    }
+    componentDidUpdate(){
+        if(this.swiper){
+            this.swiper = null;
+        }
+        this.swiper=   new Swiper(".swiper-container",{
             autoplay: false,
-            freeMode : false,
+            freeMode : true,
+            autoHeight: true,
+            freeModeMomentum : false,
             freeModeSticky : true,
             centeredSlides : false,
             slidesPerView : "auto",
-            width: 113,
+        });
 
-        })
     }
 }
 

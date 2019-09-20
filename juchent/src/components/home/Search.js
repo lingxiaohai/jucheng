@@ -1,16 +1,21 @@
 import React,{Component} from "react"
-import {Link} from "react-router-dom"
+import {Link,withRouter} from "react-router-dom"
+
 class Search extends Component {
 
     render() {
         return (
 
             <header className="head">
-                <div className="head-address">
+                <div className="head-address" onClick={()=>{
+           this.props.history.push("/index/selectCity")
+                }}>
                     <strong className="head-address__icon"></strong>
                     <span className="head-address__name text-single">深圳</span>
                 </div>
-                <div className="head-search">
+                <div className="head-search" onClick={()=>{
+                    this.props.history.push("/search/index");
+                }}>
                     <img src="https://m.juooo.com/static/img/nav_icon_search.f194288.png" alt=""
                          className="head-search__img" />
                         <span className="head-search__lab">搜索热门演出</span>
@@ -25,4 +30,4 @@ class Search extends Component {
         )
     }
 }
-export default Search
+export default withRouter(Search)
