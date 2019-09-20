@@ -4,22 +4,33 @@ import Login from "../views/Login"
 import Theater from "../views/Theater"
 import Page from "../views/Page"
 import Cart from "../views/Cart"
-<<<<<<< HEAD
-import ShowsLibrary from '../views/ShowsLibrary'
-=======
+
+
+
+
 import Advertion from "../views/Advertion"
 import Scores from "../views/Scores"
-
+import Searched from '../views/Searched'
 
 
 import Myjuooo from "../views/Myjuooo"
 import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
 import MyjuoooIndex from "../views/MyjuoooIndex.js"
->>>>>>> 252b4c4bfbca8081146d3c0bfa88eae93fa8e682
+
 
 const route =[
-
+    {
+        path:"/show/showsLibrary/:cityid/:id",
+        name:"show/showsLibrary",
+        component:Advertion
+    },
+    {
+        path:"/search/index",
+        name:"search/index",
+        component:Searched
+    }
+    ,
     {
         path : "/Myjuooo/integralRule",
         name : "integralRule",
@@ -53,11 +64,7 @@ const route =[
         component:Scores
     }
     ,
-    {
-        path:"/show/showsLibrary",
-        name:"show/showsLibrary",
-        component:Advertion
-    },
+
 
     {
         path:"/Login",
@@ -65,17 +72,6 @@ const route =[
         component:Login
     },
 
-    {
-        path:"/Login",
-        name:"login",
-        component:Login
-    },
-    {
-        path:"/show/showsLibrary",
-        name:"showslibrary",
-        component:ShowsLibrary,
-
-    },
 
 
     {

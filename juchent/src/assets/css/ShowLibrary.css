@@ -143,9 +143,9 @@ input{
     padding-bottom: 0.5px;
 }
 
-.am-navbar am-navbar-dark{
-    background: white;
-}
+/*.am-navbar am-navbar-dark{*/
+/*    background: red;*/
+/*}*/
 
 .am-popover-placement-bottomRight {
     left:6.133rem !important;

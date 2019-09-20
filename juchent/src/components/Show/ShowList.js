@@ -33,8 +33,12 @@ class ShowList extends React.Component{
             </section>
         )
     }
+
+
+
     componentDidMount() {
         this.props.getcategoryList({index:1});
+
     }
 }
 
@@ -46,7 +50,7 @@ function mapStateToProPs(state,props) {
         category_list:state.ShowTypeList.category_list,
         category_list_page:state.ShowTypeList.category_list_page,
         id:state.ShowTypeList.id,
-        cityid:state.ShowTypeList.cityid,
+
     }
 }
 function mapDispatchToProps(dispatch,props) {

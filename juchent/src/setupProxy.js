@@ -24,10 +24,8 @@ module.exports=function (app) {
             "^/ShowList":""
         }
     }))
-<<<<<<< HEAD
 
 };
-=======
+
    
-}
->>>>>>> 252b4c4bfbca8081146d3c0bfa88eae93fa8e682
+

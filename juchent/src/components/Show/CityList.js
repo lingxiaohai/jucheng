@@ -67,9 +67,9 @@ import axios from 'axios'
             </div>
         );
     }
-     send(id){
+     send(cityid){
          this.onClose();
-         this.props.gitcityId(id);
+         this.props.gitcityId(cityid,this.props.id);
      }
      clicks(id,e){
         let li=document.getElementById("qxy_ul").children;

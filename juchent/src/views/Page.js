@@ -17,7 +17,7 @@ class Page extends Component {
     render() {
         return (
             <React.Fragment>
-                <Search></Search>
+                <Search {...this.props}></Search>
                 <main className={"main-wrap"}>
                     <section className={"main-wrap__content"}>
                         <div className="banner-wrap home-banner-wrap">
@@ -40,14 +40,13 @@ class Page extends Component {
                     </section>
 
                 </main>
-<<<<<<< HEAD
 
-                <input type="button" value={"跳转演唱会"} onClick={()=>{this.props.history.push("/show/showsLibrary")}}/>
-            </>
-=======
+
+
+
             </React.Fragment>
 
->>>>>>> 252b4c4bfbca8081146d3c0bfa88eae93fa8e682
+
         )
     }
 

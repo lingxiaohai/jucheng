@@ -28,18 +28,17 @@ class ShowTypeList extends React.Component{
         )
     }
     clicked({id,cityid},e){
-        console.log(1111);
-        console.log(e)
         let typeul =e.currentTarget.parentNode.children;
         for (let i=0;i<typeul.length;i++){
                 typeul[i].className="";
         }
-        e.currentTarget.className="typeli"
+        e.currentTarget.className="typeli";
         this.props.getcategoryList({id,cityid})
     }
     componentDidMount() {
+        let paramstypelistid =this.props.id;
+        console.log(paramstypelistid,"--------------")
         this.props.getcategorytypeList({id:0,cityid:0});
-
     }
 }
 

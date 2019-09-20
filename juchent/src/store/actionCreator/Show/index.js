@@ -69,12 +69,12 @@ export  default {
             dispatch(changeShowCityList(data.data.city_list))
         }
     },
-    gitcityId(cityid){
+    gitcityId(cityid,id){
         // console.log(cityid,789456);
         console.log(789456);
         return  (dispatch)=>{
             dispatch(changeShowCityId(cityid));
-            this.getcategoryList({cityid})
+            this.getcategoryList({cityid,id})
         }
     }
 
