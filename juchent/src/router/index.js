@@ -6,27 +6,40 @@ import Page from "../views/Page"
 import Cart from "../views/Cart"
 import Advertion from "../views/Advertion"
 import Scores from "../views/Scores"
-
-
-
+import Searched from '../views/Searched'
 import Myjuooo from "../views/Myjuooo"
 import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
 import MyjuoooIndex from "../views/MyjuoooIndex.js"
 import SelectCity from "../views/SelectCity"
 import Search from "../views/Search"
+
+
+
+
+
 const route =[
     {
-      path:"/search/index/",
-      name:"search",
-      component:Search
+        path:"/search/index/",
+        name:"search",
+        component:Search
     },
     {
         path:"/index/selectCity",
         name:"selectCity",
         component:SelectCity
     },
-
+    {
+        path:"/show/showsLibrary/:cityid/:id",
+        name:"show/showsLibrary",
+        component:Advertion
+    },
+    {
+        path:"/search/index",
+        name:"search/index",
+        component:Searched
+    }
+    ,
     {
         path : "/Myjuooo/integralRule",
         name : "integralRule",
@@ -60,17 +73,15 @@ const route =[
         component:Scores
     }
     ,
-    {
-        path:"/show/showsLibrary",
-        name:"show/showsLibrary",
-        component:Advertion
-    },
+
 
     {
         path:"/Login",
         name:"login",
         component:Login
     },
+
+
     {
         path:"/",
         name:"home",
@@ -80,7 +91,7 @@ const route =[
                 path:"/",
                 name:"Page",
                 component:Page,
-                exact:true
+                exact:true,
             },
             {
                 path:"/my",
@@ -96,10 +107,13 @@ const route =[
                 path:"/Theater",
                 name:"Theater",
                 component:Theater
-            }
+            },
+
+
 
         ]
-    }
+
+    },
 
 ];
 export default route

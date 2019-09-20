@@ -1,3 +1,4 @@
+
 import axios from "axios"
 import { GENGAI_SWIPERLIST } from "../../actionType/home/Swiper";
 
@@ -7,6 +8,7 @@ export const changeSwiperList = function (payload) {
       payload
    }
 }
+
 export default {
    getSwiper() {
       return async (dispatch) => {

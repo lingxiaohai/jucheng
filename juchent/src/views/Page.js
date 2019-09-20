@@ -19,7 +19,7 @@ class Page extends Component {
     render() {
         return (
             <React.Fragment>
-                <Search></Search>
+                <Search {...this.props}></Search>
                 <main className={"main-wrap"}>
                     <section className={"main-wrap__content"}>
                         <div className="banner-wrap home-banner-wrap">
@@ -43,7 +43,12 @@ class Page extends Component {
                     </section>
 
                 </main>
+
+
+
+
             </React.Fragment>
+
 
         )
     }

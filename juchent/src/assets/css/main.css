@@ -910,5 +910,13 @@
     display: inline-block
 }
 
+.recommend-list li .show-date {
+    font-size: .32rem;
+    height: .64rem;
+    line-height: .64rem;
+    letter-spacing: 1px;
+    color: #666;
+    text-align: left;
+}
 
 

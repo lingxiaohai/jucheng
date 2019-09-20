@@ -4,6 +4,7 @@ import {Link,withRouter} from "react-router-dom"
 class Search extends Component {
 
     render() {
+
         return (
 
             <header className="head">
@@ -13,9 +14,9 @@ class Search extends Component {
                     <strong className="head-address__icon"></strong>
                     <span className="head-address__name text-single">深圳</span>
                 </div>
-                <div className="head-search" onClick={()=>{
-                    this.props.history.push("/search/index");
-                }}>
+
+                <div className="head-search" onClick={()=>{this.props.history.push("/search/index")}}>
+>
                     <img src="https://m.juooo.com/static/img/nav_icon_search.f194288.png" alt=""
                          className="head-search__img" />
                         <span className="head-search__lab">搜索热门演出</span>

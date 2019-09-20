@@ -19,17 +19,23 @@ import "../assets/css/tab.css"
         return(
             <div id={"app"}>
                 <div className="home page">
+
                 {routerArr[routerArr.length-1].Children.map((v,index)=>
+
                     <Route {...v}  key={index}></Route>
                 )}
             <div className={"tabs"}>
                 <nav className={'nav'}>
+
+
+
                 <div className={"nav-item"} onClick={()=>{
                     this.setState({isShow:true})
                 }}>
                     <NavLink to={"/"} className={"nav-item-link router-link-exact-active"} exact activeStyle={{color:"red"}}>
                         <span className={this.state.isShow?"icon home-icon":"icon home-icons"}></span>
                         <span className="nav-name nav-name0" style={{display:this.state.isShow?"none":"block"}} >首页</span>
+
                     </NavLink>
                 </div>
                     <div className="nav-item" onClick={this.chanisShow.bind(this)}>
@@ -56,8 +62,12 @@ import "../assets/css/tab.css"
 
             </div>
 
+
+
+
                 </div>
             </div>
+
         )
     }
  }
