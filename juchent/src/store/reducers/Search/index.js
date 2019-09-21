@@ -11,6 +11,13 @@ export default function (state=seacrch,action) {
 
         state.searchList = action.payload
     }
+    if (action.type === "CHANGE_HISTORY_LIST"){
+        state.historyList.unshift(action.payload);
+        state.historyList=[...new Set(state.historyList)]
+    }
+    if ( action.type==="CHANGE_DELETE_HISTORY_LIST") {
+        state.historyList=[]
+    }
 
     return state
 }

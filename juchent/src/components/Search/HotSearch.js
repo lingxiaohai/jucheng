@@ -7,17 +7,19 @@ class HotSearch extends  React.Component{
         return(
             <div className={"qxy_default-wrap"}>
 
-                <section className={"qxy_history-search"}>
+                <section className={"qxy_history-search"} style={{display:this.props.historyList.length>0?"block":"none"}}>
                     <h3 className={"qxy_history-search_clearfix"}>
                         <span className={"qxy_clearfix_left"}>历史搜索</span>
-                        <span className={"qxy_clearfix_icon"}> </span>
+                        <span className={"qxy_clearfix_icon"}  onClick={this.deleteHistory.bind(this)}> </span>
                     </h3>
                     <ul className={"qxy_history_list"}>
-                        <li>陈赫</li>
-                        <li>陈赫</li>
-                        <li>范冰冰</li>
-                        <li>古力娜扎</li>
-                        <li>岳云鹏</li>
+                        {
+                            this.props.historyList.map((v,i)=>(
+                                <li key={i} onClick={this.Putin.bind(this,v)}>
+                                    {v}
+                                </li>
+                            ))
+                        }
                     </ul>
                 </section>
                 <section className={"qxy_hot-search"}>
@@ -38,6 +40,9 @@ class HotSearch extends  React.Component{
 
         )
     }
+    deleteHistory(){
+        this.props.deleteHistoryList()
+    }
     Putin(values){
         let input =document.getElementsByClassName("qxy_text")[0];
         input .value=values;
@@ -53,13 +58,16 @@ class HotSearch extends  React.Component{
             const ullist = document.getElementsByClassName("qxy_recommend_wrap")[0];
             warp.style.display="block";
             ullist.style.display="none";
+
         }
 
-
+        this.props.getHistoryList(values);
         this.props.getSearchContent(values)
     }
+
     componentDidMount() {
         this.props.getHotSearch();
+
     }
 }
 function mapStateToProps(state,props) {
@@ -67,6 +75,7 @@ function mapStateToProps(state,props) {
     return {
         hotsearchList:state.searchList.hotsearchList,
         searchList:state.searchList.searchList,
+        historyList:state.searchList.historyList,
     };
 
 }

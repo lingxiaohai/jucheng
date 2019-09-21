@@ -8,7 +8,7 @@ import {bindActionCreators} from 'redux'
 
 class Searched extends  React.Component{
     render() {
-        console.log(this.props,3333333333333)
+
         return(
             <div id={"qxy_box"}>
                     <Search {...this.props}></Search>

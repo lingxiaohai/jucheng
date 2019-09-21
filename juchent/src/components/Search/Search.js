@@ -9,8 +9,8 @@ class Search extends React.Component{
             <header id={"qxy_headers"}>
                 <div className={"qxy_search-ipt"}>
                     <span className={"qxy_search-icon"}> </span>
-                    <form action="">
-                        <input type="search"  placeholder={"搜索热门演出"} className={"qxy_text"} onChange={this.keyup.bind(this)} ref={"search"}/>
+                    <form onSubmit={(e) => this.getSearchData(e)} >
+                        <input type="search"  placeholder={"搜索热门演出"} className={"qxy_text"} onChange={this.keyup.bind(this)} ref={"search"} onKeyUp={this.getKeyCode.bind(this)}/>
                     </form>
                     <span className={"qxy_cancel-icon"} onClick={this.empty.bind(this)}> </span>
                 </div>
@@ -19,9 +19,9 @@ class Search extends React.Component{
 
         )
     }
+
     empty(){
         this.refs.search.value=null;
-
         this.keyup()
     }
     keyup(){
@@ -33,15 +33,26 @@ class Search extends React.Component{
         }else {
             const warp = document.getElementsByClassName("qxy_default-wrap")[0];
             const ullist = document.getElementsByClassName("qxy_recommend_wrap")[0];
-            warp.style.display="block"
+            warp.style.display="block";
             ullist.style.display="none";
         }
         let str = this.refs.search.value;
         this.props.getSearchContent(str)
     }
-     componentDidMount() {
-        this.keyup()
+    getSearchData(event) {
+        event.preventDefault();
 
+    }
+    getKeyCode(e){
+
+        if (e.keyCode ===13){
+            this.props.getHistoryList(this.refs.search.value)
+            // console.log(this.refs.search.value)
+        }
+
+    }
+     componentDidMount() {
+        this.keyup();
     }
 }
 function mapStateToProps(state,props) {

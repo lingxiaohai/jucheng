@@ -1,4 +1,5 @@
 export default {
     hotsearchList:[],
-    searchList:[]
+    searchList:[],
+    historyList:[]
 }

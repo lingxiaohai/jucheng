@@ -1,6 +1,8 @@
 import axios from 'axios'
 import {CHANGE_HOT_SEARCHLIST} from '../../actionType/Search'
 import {CHANGE_SEARCHLIST} from '../../actionType/Search'
+import {CHANGE_HISTORY_LIST} from '../../actionType/Search'
+import {CHANGE_DELETE_HISTORY_LIST} from '../../actionType/Search'
 
 const changehotsearchList=function(payload){
     return{
@@ -14,6 +16,18 @@ const changesearchList=function(payload){
         payload
     }
 };
+const changehistoryList=function(payload){
+    return{
+        type:CHANGE_HISTORY_LIST,
+        payload
+    }
+};
+const changedeletehistoryList=function(payload){
+    return{
+        type:CHANGE_DELETE_HISTORY_LIST,
+        payload
+    }
+};
 
 export default {
     getHotSearch(){
@@ -23,12 +37,20 @@ export default {
         }
     },
     getSearchContent(SearchContent){
-        console.log(888888888888888888888888888888888,SearchContent);
         SearchContent = encodeURI(SearchContent);
         return async (dispatch)=>{
             const {data} =await axios.get(`/ShowList/Show/Search/getShowList?keywords=${SearchContent}&page=1&sort_type=1&version=6.0.5&referer=2`);
-            console.log(data.data);
             dispatch(changesearchList(data.data.list))
+        }
+    },
+    getHistoryList(history){
+        return async(dispatch)=>{
+            dispatch(changehistoryList(history))
+        }
+    },
+    deleteHistoryList(){
+        return async(dispatch)=>{
+            dispatch(changedeletehistoryList())
         }
     }
 }
