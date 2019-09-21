@@ -1,8 +1,8 @@
-import React,{Component} from "react"
-import { Carousel, WingBlank } from 'antd-mobile';
+import React, {Component} from "react"
+import {Carousel, WingBlank} from 'antd-mobile';
 
 class Slideshow extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
     }
@@ -11,62 +11,61 @@ class Slideshow extends React.Component {
         data: ['1', '2', '3'],
         imgHeight: 196,
     }
-    componentWillReceiveProps(nextProps){
-        if(this.props!==nextProps){
 
-        this.setState({
-            data:nextProps.swiperList.newsList.slide_list
-        })
+    componentWillReceiveProps(nextProps) {
+        if (this.props !== nextProps) {
+
+            this.setState({
+                data: nextProps.swiperList.newsList.slide_list
+            })
         }
     }
+
     componentDidMount() {
 
         // simulate img loading
     }
+
     render() {
-        let dotStyle={
+        let dotStyle = {
             width: ".13333rem",
-        height: ".13333rem",
-        "background": "#fff",
+            height: ".13333rem",
+            "background": "#fff",
 
-        opacity: 0.5,
-    };
-        let active={
-            opacity:"1" ,
-        width: ".34667rem",
+            opacity: 0.5,
+        };
+        let active = {
+            opacity: "1",
+            width: ".34667rem",
 
-            background:"#fff"
+            background: "#fff"
         }
 
         const swiperList = this.props.swiperList.newsList.slide_list;
 
         return (
-            <WingBlank  style={{margin:0,}} className={"swiper-container swiper-container-horizontal"}>
-                <Carousel class={"swiper-container swiper-container-horizontal"}
-                    autoplay={true}
-                    slideWidth={1}
-                    infinite
-                     dotStyle={dotStyle}
+            <WingBlank style={{margin: 0,}} >
+                <Carousel className="swiper-container swiper-container-horizontal"
+                          autoplay={true}
+                          slideWidth={1}
+                          infinite
+                          dotStyle={dotStyle}
                           dotActiveStyle={active}
 
 
                 >
-                    {this.state.data.map((val,index) => (
+                    {this.state.data.map((val, index) => (
                         <a className={"swiper-container swiper-container-horizontal"}
-                            href={val.url}
-                            key={index}
-                            href="http://www.alipay.com"
-                            style={{ display: 'inline-block', width: '100%', height:"196px" }}
+                           href={val.url}
+                           key={index}
+                           href="http://www.alipay.com"
+                           style={{display: 'inline-block', width: '100%', height: "196px"}}
                         >
                             <img
                                 src={val.image_url}
                                 alt={val.title}
-                                style={{ width: '100%', verticalAlign: 'top' }}
-                                onLoad={() => {
-                                    // fire window resize event to change height
-                                    window.dispatchEvent(new Event('resize'));
-                                    this.setState({imgHeight: 'auto'});
-                                }}
+                                style={{width: '100%', verticalAlign: 'top'}}
+
 
                             />
                         </a>

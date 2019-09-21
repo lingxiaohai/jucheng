@@ -14,12 +14,19 @@ import Category from "../components/home/Category"
 import Vipblock from "../components/home/Vipblock"
 import Recommend from "../components/home/Recommend"
 import {withRouter} from "react-router-dom"
+
+
 class Page extends Component {
+    state = {
+        city: "",
+        init:""
+    };
 
     render() {
+
         return (
             <React.Fragment>
-                <Search {...this.props}></Search>
+                <Search ></Search>
                 <main className={"main-wrap"}>
                     <section className={"main-wrap__content"}>
                         <div className="banner-wrap home-banner-wrap">
@@ -45,21 +52,19 @@ class Page extends Component {
                 </main>
 
 
-
-
             </React.Fragment>
 
 
         )
     }
 
-
     componentDidMount() {
-        this.props.getSwiper();
+        this.props.getSwiper(JSON.parse(localStorage.city).city_id);
 
         this.setState({
             swiperList: this.props
         })
+
 
     }
 }

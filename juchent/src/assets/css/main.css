@@ -626,7 +626,7 @@
 
 /* 演唱会开始 */
 .category-block {
-    margin-bottom: .8rem;
+
 }
 .category-block__list{
     padding-bottom: 1.06667rem;
@@ -737,7 +737,7 @@
 
 .recommend-block {
     padding: 0 .4rem;
-    margin-top: .8rem;
+   
 }
 
 .recommend-block__wrap{
@@ -917,6 +917,10 @@
     letter-spacing: 1px;
     color: #666;
     text-align: left;
+}
+.vip-block__advert__right__lab{
+    font-size: .37333rem;
+    color: #f0d1b0;
 }
 
 

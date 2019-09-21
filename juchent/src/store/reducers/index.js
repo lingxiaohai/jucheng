@@ -9,7 +9,7 @@ import homeblock from "./homeblock"
 
 import CategorList from "./Category"
 
-
+import cityList from "./City"
 
 export default combineReducers({
     SvipList,
@@ -17,7 +17,8 @@ export default combineReducers({
     ShowTypeList,
     JyuanList,
     homeblock,
-    CategorList
+    CategorList,
+    cityList
 })
 
 
