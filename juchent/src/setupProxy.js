@@ -14,4 +14,23 @@ module.exports=function (app) {
             "^/logins":""
         }
     }))
-}
+    //ShowLibrary用  演出表 类型
+    app.use("/ShowTpeList",proxy({
+        target:"https://m.juooo.com",
+        changeOrigin: true,
+        pathRewrite:{
+            "^/ShowTpeList":""
+        }
+    }));
+    //演出类型
+    app.use("/ShowList",proxy({
+        target:"https://api.juooo.com/",
+        changeOrigin: true,
+        pathRewrite:{
+            "^/ShowList":""
+        }
+    }))
+
+};
+
+

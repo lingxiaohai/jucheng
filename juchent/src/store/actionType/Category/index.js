@@ -1,0 +1,1 @@
+export const GENGAI_CATE = "GENGAI_CATE"

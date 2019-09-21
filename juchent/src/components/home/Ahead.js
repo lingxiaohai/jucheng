@@ -1,6 +1,6 @@
-import React, { Component } from "react"
-import { connect } from "react-redux"
-import { bindActionCreators } from "redux"
+import React, {Component} from "react"
+import {connect} from "react-redux"
+import {bindActionCreators} from "redux"
 import svipList from "../../store/actionCreator/Svip";
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
@@ -14,7 +14,7 @@ class Ahead extends Component {
     }
 
     render() {
-        let { priorList } = this.props
+        let {priorList} = this.props
 
         // if (priorList && priorList.length>1) {
 
@@ -45,7 +45,7 @@ class Ahead extends Component {
                                         <a href="" className="vip-ahead__list__item__wrap">
                                             <img
                                                 src={v.pic}
-                                                className="vip-ahead__list__item__wrap__pic" />
+                                                className="vip-ahead__list__item__wrap__pic"/>
                                         </a>
                                     </div>
                                     <div className="vip-ahead__list__info">
@@ -67,52 +67,57 @@ class Ahead extends Component {
                             </div>
                         )}
                     </div>
-                    <div className="swiper-pagination vip-pagination swiper-pagination-bullets" ref={"swiper-pagination"}></div>
+                    <div className="swiper-pagination vip-pagination swiper-pagination-bullets"
+                         ref={"swiper-pagination"}></div>
                 </div>
             </section>
         )
     }
 
     handleInitialization() {
+
         let item = this.refs['swiper-container'];
         let page = this.refs['swiper-pagination'];
+         this.swiper =  new Swiper(item, {
+                loop: true,
+             spaceBetween : 0,
+                speed: 1000,
+                autoplay: {
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: page,
+                    type: 'bullets',
+                }
+            })
 
-
-        setTimeout(()=>{
-        new Swiper(item, {
-            loop: true,
-            speed: 1000,
-            autoplay: {
-                disableOnInteraction:false,
-            },
-            observeParents: true,
-            observer: true,
-            pagination: {
-                el: page,
-                type: 'bullets',
-            }
-        })
-        },500)
     }
 
-
-
-    componentDidMount() {
-        this.props.getSvipList(this.props);
+    componentDidUpdate(){
+        if(this.swiper){
+            this.swiper.slideTo(0, 0)
+            this.swiper.destroy()
+            this.swiper = null;
+        }
         this.handleInitialization()
     }
-    // componentWillUnmount() {
-    //     if (this.swiper) { // 销毁swiper
-    //         this.swiper.destroy()
-    //     }
-    // }
+    componentDidMount() {
+        this.props.getSvipList(this.props);
+
+    }
+
+    componentWillUnmount() {
+        if (this.swiper) { // 销毁swiper
+            this.swiper.destroy()
+        }
+    }
 
 }
 
 function mapStateToProps(state) {
 
     return {
-        priorList: state.SvipList.priorList
+        priorList: state.SvipList.discountList
     }
 }
 
