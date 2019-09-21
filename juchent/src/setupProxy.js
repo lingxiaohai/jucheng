@@ -6,6 +6,12 @@ module.exports=function (app) {
         pathRewrite:{
             "^/home":""
         }
+    }));
+    app.use("/logins",proxy({
+        target: "http://127.0.0.1",
+        changeOrigin:true,
+        pathRewrite: {
+            "^/logins":""
+        }
     }))
-   
 }

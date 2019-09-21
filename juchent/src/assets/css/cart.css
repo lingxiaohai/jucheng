@@ -24,7 +24,7 @@
     color: #232323;
     /* display: -webkit-box; */
     /* display: -ms-flexbox; */
-    display: flex;
+    /*display: flex;*/
     -webkit-box-pack: justify;
     /* -ms-flex-pack: justify; */
     justify-content: space-between;
@@ -32,7 +32,7 @@
     /* -ms-flex-align: center; */
     align-items: center;
     /* position: relative; */
-    border-bottom: 1px solid #ebebeb;
+    /*border-bottom: 1px solid #ebebeb;*/
     /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;
 }
@@ -48,8 +48,9 @@
     font-size: 19px;
 }
 .title__ellipsis{
+    float: right;
     font-size: .48rem;
-    padding: .29333rem .3rem;
+    padding: .2333rem .3rem;
 }
 .ticket-empty{
     width: 100%;
