@@ -10,7 +10,15 @@ import Myjuooo from "../views/Myjuooo"
 import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
 import MyjuoooIndex from "../views/MyjuoooIndex.js"
+import Ticket_107032 from '../views/Ticket_107032'
+
 const route =[
+    {
+        path : "/ticket/107032",
+        name : "ticket_107032",
+        component : Ticket_107032
+    }
+    ,
     {
         path : "/Myjuooo/integralRule",
         name : "integralRule",
