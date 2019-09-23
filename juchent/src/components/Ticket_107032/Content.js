@@ -27,7 +27,7 @@ class Content extends Component{
             <>
                 <div data-v-04d278ca className="t-brief__primary__fg__content">
                     <div data-v-681cfcc8 data-v-04d278ca className="t-cover t-brief__primary__fg__content__cover">
-                        <img ref="bg" className="t-cover__img" data-v-681cfcc8 
+                        <img  className="t-cover__img" data-v-681cfcc8 
                         src={share_data.share_pic}
                         alt=""
                         />
