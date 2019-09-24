@@ -59,7 +59,7 @@ class Page extends Component {
     }
 
     componentDidMount() {
-        this.props.getSwiper(JSON.parse(localStorage.city).city_id);
+        this.props.getSwiper();
 
         this.setState({
             swiperList: this.props

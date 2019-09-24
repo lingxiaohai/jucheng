@@ -1,0 +1,83 @@
+.discount{
+    position: relative;
+    height: 100%;
+}
+.discount .discount_head{
+    position: absolute;
+    z-index: 101;
+    left: 0;
+    right: 0;
+    height: 1.17333rem;
+}
+.title{
+    height: 45px;
+    width: 100%;
+    background-color: #fff;
+    font-size: .48rem;
+    color: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ebebeb;
+    box-sizing: border-box;
+}
+.title_text{
+    font-size: 18px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+.title_back{
+    float: left;
+    padding: .29333rem .53333rem .29333rem .26667rem;
+    font-size: .48rem;
+    margin-left:10px;
+}
+.title_ellipsis{
+    float: right;
+    margin-right:10px;
+    font-size: .48rem;
+    padding: .29333rem .4rem;
+}
+.iconfont {
+    font-family: "iconfont";
+    font-size: 21px;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

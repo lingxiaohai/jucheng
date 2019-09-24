@@ -105,11 +105,9 @@ const route =[
                 component:Theater
             },
 
-
-
         ]
-
     },
+
 
 ];
 export default route
