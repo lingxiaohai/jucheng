@@ -12,13 +12,19 @@ import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
 import MyjuoooIndex from "../views/MyjuoooIndex.js"
 import SelectCity from "../views/SelectCity"
-
-
-
-
-
-
+import TheIndex from "../views/TheIndex"
+import TheShpList from "../views/TheShpList"
 const route =[
+    {
+        path : "/Theater/index",
+        name : "index",
+        component :TheIndex,
+    },
+    {
+        path : "/Theater/showList",
+        name : "showList",
+        component :TheShpList,
+    },
 
     {
         path:"/index/selectCity",
@@ -102,7 +108,7 @@ const route =[
             {
                 path:"/Theater",
                 name:"Theater",
-                component:Theater
+                component:Theater,        
             },
 
 

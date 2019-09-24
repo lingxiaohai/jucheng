@@ -115,4 +115,12 @@ strong {
 #root{
     height: 100%;
 }
+p{
+        font-size: 12px;
+    display: block; 
+    margin-block-start: 0; 
+    margin-block-end: 0; 
+  margin-inline-start: 0px; 
+     margin-inline-end: 0px;
+}
 /* 搜索 */
