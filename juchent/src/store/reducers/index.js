@@ -8,13 +8,20 @@ import JyuanList from "./juyuna"
 import homeblock from "./homeblock"
 import searchList  from "./Search"
 
+import CategorList from "./Category"
+
+import cityList from "./City"
+
 export default combineReducers({
     SvipList,
     SwiperList,
     ShowTypeList,
     JyuanList,
     homeblock,
-    searchList
+    searchList,
+    CategorList,
+    cityList
+
 })
 
 

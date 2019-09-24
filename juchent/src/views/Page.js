@@ -12,12 +12,21 @@ import Operation from "../components/home/Operation"
 import Hotblock from "../components/home/Hotblock"
 import Category from "../components/home/Category"
 import Vipblock from "../components/home/Vipblock"
+import Recommend from "../components/home/Recommend"
+import {withRouter} from "react-router-dom"
+
+
 class Page extends Component {
+    state = {
+        city: "",
+        init:""
+    };
 
     render() {
+
         return (
             <React.Fragment>
-                <Search {...this.props}></Search>
+                <Search ></Search>
                 <main className={"main-wrap"}>
                     <section className={"main-wrap__content"}>
                         <div className="banner-wrap home-banner-wrap">
@@ -37,11 +46,10 @@ class Page extends Component {
                         </section>
                         <Vipblock></Vipblock>
                         <Category></Category>
+                        <Recommend></Recommend>
                     </section>
 
                 </main>
-
-
 
 
             </React.Fragment>
@@ -50,13 +58,13 @@ class Page extends Component {
         )
     }
 
-
     componentDidMount() {
         this.props.getSwiper();
 
         this.setState({
             swiperList: this.props
         })
+
 
     }
 }
@@ -73,4 +81,4 @@ function mapDidToProps(dispatch) {
 
 }
 
-export default connect(mapStateToProps, mapDidToProps)(Page)
+export default withRouter(connect(mapStateToProps, mapDidToProps)(Page))

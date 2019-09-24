@@ -1,17 +1,4 @@
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,form,fieldset,legend,input,textarea,select,header,footer,section,nav,aside,article{margin: 0;padding: 0;}
-*{box-sizing: border-box;touch-action:auto}
-a{text-decoration: none;}
-li{list-style: none;}
-img{vertical-align: middle;border: none;}
-em,i{font-style:normal}
-b,strong{font-weight:normal;}
-table{border-collapse:collapse;border-spacing:0}
-html,body{
-    height: 100%;
-    width: 100%;
-    font-size: 37.5px;
 
-}
 #qxy_box{
     width: 100%;
     height: 100%;
@@ -29,7 +16,7 @@ html,body{
     justify-content: space-around;
 }
 .qxy_search-ipt{
-    width: 8.05333rem;
+
     height: .8rem;
     line-height:  .8rem;
     background-color: #f5f5f5;
@@ -73,6 +60,8 @@ html,body{
     font-family: PingFang-SC-Medium;
     font-size: .37333rem;
     color: #666;
+    width: 0.747rem;
+    height: 0.507rem;
 }
 .qxy_default-wrap{
     padding: .69333rem .4rem 0;

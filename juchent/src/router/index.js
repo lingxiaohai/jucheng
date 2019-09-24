@@ -4,22 +4,29 @@ import Login from "../views/Login"
 import Theater from "../views/Theater"
 import Page from "../views/Page"
 import Cart from "../views/Cart"
-
-
-
-
 import Advertion from "../views/Advertion"
 import Scores from "../views/Scores"
 import Searched from '../views/Searched'
-
-
 import Myjuooo from "../views/Myjuooo"
 import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
 import MyjuoooIndex from "../views/MyjuoooIndex.js"
+import SelectCity from "../views/SelectCity"
+import Plusindex from "../views/Plusindex"
+import ShopPlusby from "../views/ShopPlusBuy"
+
+
+
+
 
 
 const route =[
+
+    {
+        path:"/index/selectCity",
+        name:"selectCity",
+        component:SelectCity
+    },
     {
         path:"/show/showsLibrary/:cityid/:id",
         name:"show/showsLibrary",
@@ -64,6 +71,19 @@ const route =[
         component:Scores
     }
     ,
+    {
+        path:"/plus/index",
+        name:"plus/index",
+        component:Plusindex
+    }
+    ,
+
+    {
+        path:"/shop/plus/buy",
+        name:"/shop/plus/buy",
+        component:ShopPlusby
+    }
+    ,
 
 
     {
@@ -71,7 +91,6 @@ const route =[
         name:"login",
         component:Login
     },
-
 
 
     {

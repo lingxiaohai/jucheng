@@ -1,0 +1,506 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, dt, form, fieldset, legend, input, textarea, select, header, footer, section, nav, aside, article {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    touch-action: auto
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+em, i {
+    font-style: normal
+}
+
+b, strong {
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 37.5px;
+}
+
+.qxy_plus_header_buyspan {
+    width: 100%;
+    font-size: .48rem;
+    font-weight: 400;
+    color: #232323;
+    padding: 0 1.33333rem 0 0;
+    text-align: center;
+}
+
+.qxy_plus-buy__content__info {
+    margin-bottom: .32rem;
+}
+
+.qxy_card-block {
+    width: 100%;
+    height: 5.26667rem;
+    padding-top: .4rem;
+    background-color: #fefefe;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.qxy_card-block__info {
+    width: 8.58667rem;
+    height: 4.53333rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.qxy_card-block__info__mark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .26667rem;
+}
+
+.qxy_card-block__info__bg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
+    border-radius: .26667rem;
+    overflow: hidden;
+    padding: .4rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: url("../img/plus_card_bg.81d1e6b.png");
+}
+
+.cqxy_ard-block__info__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.qxy_card-block__info__title__block_plus--logo {
+    display: block;
+    width: 3.68rem;
+    height: .84rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url("../img/Vcak.png");
+}
+
+.qxy_card-block__info__title__lab_plus--lab {
+    color: #bfb28a;
+    background-color: rgba(0, 0, 0, .4);
+    height: .45333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 .08rem;
+    font-size: .26667rem;
+    border-radius: .06667rem;
+    margin-left: .26667rem;
+}
+
+.qxy_card-block__info__amount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    bottom: .2rem;
+    left: .4rem;
+    right: .4rem;
+}
+
+.qxy_card-block__info__amount__may_plus--may {
+    color: #f7e9be;
+    font-size: .66667rem;
+}
+
+.qxy_card-block__info__amount__act {
+    font-size: .34667rem;
+}
+
+.qxy_card-block__info__amount__act_plus--act {
+    color: #bfb28a;
+    font-size: .34667rem;
+}
+
+.qxy_card-block__info__amount__give_plus--give {
+    color: #f7e9be;
+    font-size: .37333rem;
+}
+
+.qxy_payment-activity {
+    width: 100%;
+    background-color: #fefefe;
+    padding-bottom: .53333rem;
+    overflow: hidden;
+}
+
+.qxy_payment-content {
+    isplay: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 8.58667rem;
+    height: 1.01333rem;
+    background-color: #fff0de;
+    margin: 0.4rem auto;
+    padding-left: .4rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.qxy_payment-activity__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.qxy_payment-activity__info__sign {
+    width: 1.01333rem;
+    height: .52rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    font-size: .32rem;
+    background-image: linear-gradient(-50deg, #ff4d4a, #ff9a34), linear-gradient(#ebebeb, #ebebeb);
+    background-blend-mode: normal, normal;
+    border-radius: .10667rem;
+    margin-right: .26667rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.qxy_payment-activity__info__label {
+    font-size: .37333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.qxy_payment-activity__info__label__tip {
+    color: #896039;
+    margin-right: .13333rem;
+    font-size: .37333rem;
+}
+
+.qxy_payment-activity__info__label__unit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: .37333rem;
+    height: .37333rem;
+    color: #fff0de;
+    font-size: .26667rem;
+    background-color: #bd8c5a;
+    margin-left: .06667rem;
+}
+
+.qxy_payment-activity__arrow {
+    margin-left: .33333rem;
+    color: #896039;
+    font-size: .37333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.qxy_payment-activity__arrow--con_c_ff6 {
+    padding: .02667rem .04rem 0;
+    color: #ff6743 !important;
+}
+
+.qxy_watch-citys {
+    margin-bottom: .32rem;
+    background: #f5f5f5;
+}
+
+.qxy_watch-citys__block {
+    height: 1.46667rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 .4rem;
+    background: #fefefe;
+}
+
+.qxy_watch-citys__block__title {
+    font-size: .42667rem;
+    color: #232323;
+    font-weight: 400;
+}
+
+.qxy_watch-citys__block__arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.qxy_watch-citys__block__arrow__label .am-list-extra {
+    font-size: .37333rem !important;
+    color: #ff6743 !important;
+}
+
+.qxy_watch-citys__block__arrow__icon {
+    width: .13333rem;
+    height: .26667rem;
+    display: block;
+    margin-left: .4rem;
+    background-size: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-image: url("../img/sjjt.png");
+}
+
+.qxy_payment-mode {
+    padding: 0 .4rem;
+    background: #fefefe;
+}
+
+.qxy_payment-mode__title {
+    height: 1.46667rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+
+}
+
+.qxy_payment-mode__title__h3 {
+    font-size: .42667rem;
+    font-weight: 400;
+    color: #232323;
+}
+
+.qxy_payment-mode__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+    height: 1.86667rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.qxy_payment-mode__list__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.qxy_payment-mode__list__info__icon_alipay--icon {
+    width: .8rem;
+    height: .8rem;
+    background-size: 100%;
+    background-position: 50%;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin-right: .4rem;
+    background-image: url("../img/zfb.png");
+}
+
+.qxy_payment-mode__list__info__payname {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.qxy_payment-mode__list__info__payname__title {
+
+    font-size: .42667rem;
+    font-weight: 400;
+    color: #232323;
+    line-height: .53333rem;
+}
+
+.qxy_payment-mode__list__checkout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    height: 0.533rem;
+    width: 0.533rem;
+}
+
+.qxy_payment-mode__list__checkout__icon_juooo-success_juooo-checkout {
+
+    width: 0.533rem;
+    height: 0.533rem;
+    background-size: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: .26667rem;
+    background-image: url("../img/dg.png");
+
+}
+
+.qxy_foot_foot-media {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.4rem;
+    border-top: 1px solid #ebebeb;
+    background-color: #fefefe;
+    position: absolute !important;
+    display: block;
+}
+
+.qxy_foot-agree {
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    padding-left: .4rem;
+}
+
+.qxy_c_ff6 {
+    color: #ff6743 !important;
+    font-size: .32rem;
+}
+
+.qxy_foot-btn {
+    border-top: 1px solid #ebebeb;
+    height: 1.30667rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.qxy_foot-btn__text {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 1.30667rem;
+    text-align: center;
+}
+
+.qxy_foot-btn__text__label {
+    font-size: .45333rem;
+    color: #232323;
+    font-weight: 700;
+}
+
+.qxy_foot-btn__text__payment {
+    font-size: .37333rem;
+    color: #ff6743;
+}
+
+.qxy_foot-btn__text__gift {
+    font-size: .37333rem;
+    color: #999;
+}
+
+.qxy_juooo-btn_juooo-btn--primary {
+    color: #fefefe;
+    background-image: linear-gradient(-50deg, #ff4d4a, #ff9a34), linear-gradient(#ebebeb, #ebebeb);
+    background-blend-mode: normal, normal;
+    width: 5.46667rem;
+    display: block;
+    font-size: .45333rem;
+
+    border: none;
+}
+.am-list-item.am-list-item-middle .am-list-line {
+    align-items: center !important;
+    width: 300px !important;
+    border: none !important;
+}
+.am-list-item .am-list-line .am-list-extra {
+
+    margin-left: 2rem !important;
+}
+.am-list-body{
+    border: none;
+}

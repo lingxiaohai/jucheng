@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux'
 import axios from 'axios'
 import store from '../store/index'
 import '../assets/css/ShowLibrary.css'
+
 import Creator, {changeShowcategoryTypeList,changeShowcategoryList,changeShowcategoryListMore,changeShowcategoryListPage} from '../store/actionCreator/Show'
 import ShowTypeList from  '../components/Show/ShowTypeList'
 import ShowList from  '../components/Show/ShowList'

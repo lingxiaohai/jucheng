@@ -1,16 +1,4 @@
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,form,fieldset,legend,input,textarea,select,header,footer,section,nav,aside,article{margin: 0;padding: 0;}
-*{box-sizing: border-box;touch-action:auto}
-a{text-decoration: none;}
-li{list-style: none;}
-img{vertical-align: middle;border: none;}
-em,i{font-style:normal}
-b,strong{font-weight:normal;}
-table{border-collapse:collapse;border-spacing:0}
-html,body{
-    height: 100%;
-    width: 100%;
-    font-size: 37.5px;
-}
+
 #qxy_box{
     width: 100%;
     height: 100%;
@@ -44,7 +32,7 @@ html,body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.267rem 0rem 0.267rem 0.4rem;
+    padding: 0.267rem 0rem 0.267rem 0rem;
 
 }
 #qxy_show_type_wrap ul{
@@ -55,7 +43,7 @@ html,body{
     position: relative;
     width: 17.387rem;
     overflow-x: auto;
-    margin-top: 5px;
+    margin-top: 0.4rem;
 
 }
 #qxy_show_type_wrap ul::-webkit-scrollbar {display: none;}
@@ -168,7 +156,9 @@ input{
 
 
 }
-
+#qxy_ul{
+    padding-left: 0 !important;
+}
 .qxy_li{
     width:2.24rem;
     height:0.853rem;
