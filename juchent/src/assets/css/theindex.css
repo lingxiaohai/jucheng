@@ -1,0 +1,269 @@
+@font-face {font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_1425751_x2sel7oo05q.eot?t=1568896553600'); /* IE9 */
+    src: url('//at.alicdn.com/t/font_1425751_x2sel7oo05q.eot?t=1568896553600#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+    url('//at.alicdn.com/t/font_1425751_x2sel7oo05q.woff?t=1568896553600') format('woff'),
+    url('//at.alicdn.com/t/font_1425751_x2sel7oo05q.ttf?t=1568896553600') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('//at.alicdn.com/t/font_1425751_x2sel7oo05q.svg?t=1568896553600#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-shopcart:before {
+    content: "\e60b";
+  }
+  
+  .icon-kefu:before {
+    content: "\e671";
+  }
+  
+  .icon-i-home:before {
+    content: "\e60a";
+  }
+  
+  .icon-previewleft:before {
+    content: "\e75b";
+  }
+  
+  .icon-previewright:before {
+    content: "\e75c";
+  }
+  
+  .icon-ai-cart:before {
+    content: "\e63a";
+  }
+  
+  .icon-yanjing:before {
+    content: "\e681";
+  }
+  
+  .icon-dianhua:before {
+    content: "\e611";
+  }
+  
+  .icon-tel:before {
+    content: "\e641";
+  }
+  
+  .icon-ditu:before {
+    content: "\e60c";
+  }
+  
+  .icon-aixin:before {
+    content: "\e605";
+  }
+  
+  .icon-ellipsis:before {
+    content: "\e608";
+  }
+  
+  .icon-share:before {
+    content: "\e780";
+  }
+.cjnavbar{
+	backface-visibility: hidden;
+    margin: 0;
+    border-bottom: 0.9994px solid #e7e7e7;
+    width: 100%;
+    height:43.605px;
+    font-size:14.9986px;
+	color: #212121;
+	position: fixed;
+    z-index: 500;
+    left: 0;
+    top: 0;
+    background-color: #fdfdfd;
+}
+.cjnavbar-innre{
+   position: absolute;
+   left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cjleft{
+    display: flex;
+    width: 60.1616px;
+    height: 43.6164px;
+    line-height: 43.6164px;
+    position: absolute;
+    top:0
+}
+.cjlefta{
+    padding-left: 15.0404px;
+    height: 100%;
+    width:120.0002px;
+}
+.cjcenter{
+    text-align: center;
+    line-height: 43.6164px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.cjright{
+    position: absolute;
+    right:15.0404px;
+    top:5.5138px;
+}
+.cjswiper-slide {
+    height:155.4162px;
+}
+.cjswiper-slideimg{
+    width: 100%;
+    height: 100%;
+}
+.cjbox{
+    width:100%;
+    height: 100%;
+}
+.cjcategory-container{
+    width:100%;
+    height:88.2322px;
+    background: white;
+}
+.cjcategory-wrap{
+    width: 350.9338px;
+    height: 61.161px;
+    padding: 18px 0;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: -1px 1px 7px 2px rgba(178, 178, 178, 0.1);
+    margin-top: 5px;
+}
+.cjcategory-wrap a{
+    text-align: center;
+    width: 87.7344px;
+    height: 61.161px;
+    display: block;
+}
+.cjimgbox{
+    width: 87.7344px;
+    height: 45.6228px;
+    line-height: 45.6228px;
+    display: flex;
+    justify-content: center;
+}
+.cjimgbox img{
+    width: 42.1116px;
+    height:  42.1116px;
+    text-align: center
+}
+.cjimgtext{
+    font-size: 6.0154px;
+}
+.cjlink{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.cjdivtext{
+    font-size:15.8232px;
+    color: #333;
+    font-weight: bold;
+    background: #fff;
+    position: relative;
+    padding: 5.016px;
+    text-indent: 10px;
+}
+.cjlist-wrap {
+    width: 100%;
+    padding: 0 12.5362px;
+    background: white;
+}
+.cjshow-item{
+    display: block;
+    height: 124.8338px;
+    padding: 7.5202px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.cjshow-left{
+    position: relative;
+    border: 0.9994px solid #f2f2f2;
+    width: 89.2392px;
+    height: 119.32px;
+    margin-right: 12.5362px;
+    float: left;
+}
+.cjshow-left img{
+    width: 100%;
+    height: 100%;
+    border:0.9994px solid #fff;
+}
+.cjshow-right{
+    float: left;
+    width: 243.1468px;
+    font-size: 12.0004px;
+}
+.cjtitle{
+    font-size: 14.0372px;
+    padding-top: 3.0096px;
+    margin-bottom: 12.5362px;
+    width: 243px;
+    height: 39px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    /*控制在3行*/
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+ 
+    
+}
+.cjshow-time,.cjshow-venue{
+    width: 100%;
+    color: #999;
+    height: 17.5446px;
+    line-height: 17.5446px;
+    font-size: 11.0314px;
+    overflow: hidden;
+
+}
+.cjft0{
+    color: #ff7919;
+    margin-top:12.5362px;
+}
+.cjfs24{
+    margin-right:2.0064px;
+    font-size: 12.0308px
+}
+.cjfs32{
+    font-size: 16.0398px;
+}
+.cjall-show{
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    position: relative; 
+    font-weight: 100;
+}
+.cjall-a{
+    width:116px;
+    height: 34px;
+    background: #FFF;
+    border-radius:1px;
+    border: 1px solid #e6e6e6;
+    display: block;
+    line-height: 34px;
+    color: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto auto;
+   
+}
