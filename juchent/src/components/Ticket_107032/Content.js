@@ -13,10 +13,16 @@ class Content extends Component{
     }
     async componentDidMount(){
         const {data} = await axios.get('https://api.juooo.com/Schedule/Schedule/getScheduleInfo?schedular_id=107032&version=6.0.5&referer=2')
+        // console.log(130,data.data)
+        // console.log(data.data.schedular_id)
+       
         store.dispatch(changeTitInfo(data.data));
         this.setState({
             titInfo : store.getState().TitInfo.titInfo
         })
+            
+        
+        
     }
     render(){
         // console.log(112233,this.state.titInfo)

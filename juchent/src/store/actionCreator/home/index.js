@@ -1,3 +1,4 @@
+
 import axios from "axios"
 import { GENGAI_SWIPERLIST } from "../../actionType/home/Swiper";
 
@@ -7,11 +8,12 @@ export const changeSwiperList = function (payload) {
       payload
    }
 }
+
 export default {
-   getSwiper() {
+   getSwiper(id=0) {
       return async (dispatch) => {
-         const { data } = await axios.get("/home/getClassifyHome?city_id=0");
-         console.log(data)
+         const { data } = await axios.get("/home/getClassifyHome?city_id="+id);
+
          if (data.code === '200') {
             dispatch(changeSwiperList(data.data))
          } else {

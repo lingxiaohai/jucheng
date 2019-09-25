@@ -15,7 +15,6 @@ export default {
     getSvipList() {
         return async (dispatch) => {
             const {data} = await axios.get("https://api.juooo.com/vip/index/getVipHomeSchedular?version=6.0.5&referer=2")
-            console.log(data)
             dispatch(changeSvipList(data.data));
         }
     }

@@ -1,6 +1,18 @@
 import React from 'react'
+import store from '../../store'
+import axios from 'axios';
 
 class TourCity extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            tourCityInfo : store.getState().TitInfo.titInfo
+        }
+    }
+    componentDidMount(){
+        // const {data} = axios.get('')
+    }
+    
     render(){
         return(
             <div data-v-a1f1bff8 data-v-277f55d8 className="t-tour-cities t-detail__tour-cities">

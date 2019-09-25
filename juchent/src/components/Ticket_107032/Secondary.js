@@ -12,6 +12,7 @@ class Secondary extends Component{
     }
     async componentDidMount(){
         const {data} = await axios.get('https://api.juooo.com/Show/Search/getShowList?category=79&city_id=1&version=6.0.5&referer=2');
+        // console.log(52520,data.data)
         store.dispatch(changeTitInfo(data.data));
         this.setState({
             secondaryInfo : store.getState().TitInfo.titInfo
@@ -20,7 +21,7 @@ class Secondary extends Component{
     render(){
         const secInfo = this.state.secondaryInfo || {};
         const list = secInfo.list || [];
-        const item = list.find(v=>v.schedular_id === 107033) || {};
+        const item = list.find(v=>v.schedular_id === 107034) || {};
         // console.log(item)
         return(
             <div data-v-04d278ca className="t-brief__secondary">
@@ -36,7 +37,7 @@ class Secondary extends Component{
                         </div>
                     </div>
                     <div data-v-04d278ca className="t-brief__secondary__info__place">
-                        {
+                        {item.city_name} | {
                             item.venue_name
                         }
                     </div>
