@@ -20,7 +20,7 @@ height: 100%;
     height: 43.4121px;
     width: 100%;
     padding: 0 14.8px;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     display: -webkit-box;
@@ -114,5 +114,13 @@ strong {
 }
 #root{
     height: 100%;
+}
+p{
+        font-size: 12px;
+    display: block; 
+    margin-block-start: 0; 
+    margin-block-end: 0; 
+  margin-inline-start: 0px; 
+     margin-inline-end: 0px;
 }
 /* 搜索 */

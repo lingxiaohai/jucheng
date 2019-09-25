@@ -7,6 +7,24 @@ class Search extends Component {
         init:""
     };
     componentDidMount() {
+       let H= this.head.offsetHeight;
+       let head = this.head
+        window.onscroll = function () {
+            let topScroll = document.body.scrollTop || document.documentElement.scrollTop;//滚动的距离,距离顶部的距离
+
+             console.log(this.head)
+            if (topScroll > H) {  //当滚动距离大于H时执行下面的东西
+                // iconfont.style.color = "orange";
+                // fontCol.style.cssText = "color:black;background:white";
+                // search.style.cssText = "background:#D3D3D3;color:gray";
+              head.style.cssText = "position:fixed;top:0;z-index:9999;background-color:white";
+            } else {//当滚动距离小于H的时候执行下面的内容，也就是让导航栏恢复原状
+                head.style = '';
+                // iconfont.style = "";
+                // fontCol.style = "";
+                // search.style = "";
+            }
+        }
         //定位
 
         fetch("http://restapi.amap.com/v3/ip?key=\tccada76d919e5f09a40f58e5177d6f2c").then((res) => {
@@ -34,7 +52,7 @@ class Search extends Component {
 
     render() {
         return (
-            <header className="head">
+            <header className="head" ref={el=>this.head=el}>
                 <div className="head-address" onClick={()=>{
            this.props.history.push({
                pathname:"/index/selectCity",
@@ -64,4 +82,5 @@ class Search extends Component {
         )
     }
 }
+
 export default withRouter(Search)

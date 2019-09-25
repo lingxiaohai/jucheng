@@ -25,7 +25,7 @@ class Hotblock extends React.Component {
                     </a>
                 </div>
                 <div className="hot-block__list hot-list">
-                    <div className="swiper-container swiper-container-horizontal" ref={"container"}>
+                    <div className="swiper-container swiper-container-horizontal" ref={el=>this.container=el}>
                         <div className="swiper-wrapper">
 
                             {newsList.map((v, index) =>
@@ -53,7 +53,7 @@ class Hotblock extends React.Component {
     initSwiper() {
         setTimeout(() => {
 
-            let container = this.refs["container"];
+            let container =this.container;
             new Swiper(container, {
                 autoplay: false,
                 freeMode: false,

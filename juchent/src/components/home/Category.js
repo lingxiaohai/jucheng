@@ -51,7 +51,7 @@ class Category extends React.Component {
 
 
                         <div className="category-block__list__column">
-                            <div className="swiper-container swiper-container-horizontal">
+                            <div className="swiper-container swiper-container-horizontal data-swiper">
                                 <div className="swiper-wrapper">
 
                                     {v.list.map((item,index) =>{
@@ -87,7 +87,7 @@ class Category extends React.Component {
             this.swiper.destroy()
             this.swiper = null;
         }
-        this.swiper=   new Swiper(".swiper-container",{
+        this.swiper=   new Swiper(".data-swiper",{
             autoplay: false,
             freeMode : false,
             spaceBetween : 8,

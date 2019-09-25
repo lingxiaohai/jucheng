@@ -3,18 +3,16 @@ import "../assets/css/theatre.css"
 import {bindActionCreators} from "redux"
 import {connect} from "react-redux"
 import pageList from "../store/actionCreator/juyuan"
-
+import {NavLink,Route,Switch} from "react-router-dom"
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
+import { from } from "rxjs"
 
 class Theater extends Component {
-
     render() {
-
-
         return (
             <div>
-                <header className="cjheader">
+                   <header className="cjheader">
 
                     <h3 className="cjtext-single" style={{lineHeight: "1.17rem"}}>剧院</h3>
                 </header>
@@ -37,7 +35,11 @@ class Theater extends Component {
                                                                 <p className="theater-count">{v.count}场在售演出</p>
                                                             </div>
                                                         </a>
-                                                        <a href="javascript:;" className="theater-link">
+                                                     
+                                                        
+                                                        <a  className="theater-link" onClick={()=>{
+                                                            this.props.history.push({ pathname:'Theater/index',state:{num:v.id}})
+                                                        }}>
                                                             <img className="theater-more-btn"
                                                                  src={require("../assets/img/as.png")} alt=""/>
                                                         </a>
@@ -88,8 +90,6 @@ class Theater extends Component {
 
     componentDidMount() {
         this.props.getjuyuanlist();
-
-
     }
     componentDidUpdate(){
         if(this.swiper){

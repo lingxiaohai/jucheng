@@ -88,6 +88,7 @@ class Advertion extends React.Component{
         )
     }
     componentDidMount() {
+        console.log(this.props)
         this.props.getcategoryList({id:this.props.match.params.id,cityid:this.props.match.params.cityid})
     }
 
