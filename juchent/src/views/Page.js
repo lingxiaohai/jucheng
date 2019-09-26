@@ -59,6 +59,7 @@ class Page extends Component {
     }
 
     componentDidMount() {
+        this.props.getSwiper();
 
         this.props.getSwiper();
 

@@ -66,7 +66,7 @@ class ShopPlusBuy extends React.Component {
         return (
             <div>
                 <header id="qxy_header">
-                    <i className="iconfont iconright1" onClick={() => {
+                    <i className="iconfont iconright" onClick={() => {
                         this.props.history.go(-1)
                     }}></i>
                     <h5 className={"qxy_plus_header_buyspan"}>开通橙PLUS卡</h5>

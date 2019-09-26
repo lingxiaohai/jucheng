@@ -10,7 +10,8 @@ import Searched from '../views/Searched'
 import Myjuooo from "../views/Myjuooo"
 import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
-import MyjuoooIndex from "../views/MyjuoooIndex.js"
+import MyjuoooIndex from "../views/MyjuoooIndex"
+import Ticket_107032 from '../views/Ticket_107032'
 import SelectCity from "../views/SelectCity"
 
 import Plusindex from "../views/Plusindex"
@@ -52,6 +53,12 @@ const route =[
         path:"/search/index",
         name:"search/index",
         component:Searched
+    }
+    ,
+    {
+        path : "/ticket/:id",
+        name : "ticket_107032",
+        component : Ticket_107032
     }
     ,
     {

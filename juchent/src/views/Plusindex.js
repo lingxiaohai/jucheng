@@ -46,7 +46,7 @@ class Plusindex extends React.Component{
 
 
                     <div id="qxy_header">
-                        <i className="iconfont iconright1" onClick={()=>{this.props.history.go(-1)}}></i>
+                        <i className="iconfont iconright" onClick={()=>{this.props.history.go(-1)}}></i>
                         <span className={"qxy_plus_header_span"}>橙PLUS卡</span>
                         <div  >
                             <NavBar

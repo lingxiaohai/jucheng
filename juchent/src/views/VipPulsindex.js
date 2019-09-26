@@ -47,7 +47,7 @@ class VipPulsindex extends React.Component{
         return(
             <div>
                 <div id="qxy_header">
-                    <i className="iconfont iconright1" onClick={()=>{this.props.history.go(-1)}}></i>
+                    <i className="iconfont iconright" onClick={()=>{this.props.history.go(-1)}}></i>
                     <span className={"qxy_plus_header_span"}>VIP + 会员</span>
                     <div  >
                         <NavBar
@@ -184,7 +184,7 @@ class VipPulsindex extends React.Component{
                                 <div style={{height:"570px"}}>
                                     {
                                         v.map((s,i)=>(
-                                            <div className={"qiegenao"}>
+                                            <div className={"qiegenao"} onClick={()=>{this.props.history.push("/ticket/"+s.schedular_id)}}>
                                                 <img src={s.pic} alt="" style={{width:"110px",height:"150px"}}/>
                                                 <div>
                                                     <p className={"qxy_item__info__date-week__date"}>{s.date}</p>
@@ -214,7 +214,7 @@ class VipPulsindex extends React.Component{
                     <div className={"qxy_vip-plus-discount-grid"}>
                         <div className={"qxy_vip-plus-discount-grid__row"}>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/100641")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/02/FE/rAoKmV1fNxaAPbsCAAB_-x8YGi8341.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}>音乐剧史诗巨作《贝隆夫人》Evita-杭州站</div>
@@ -226,7 +226,7 @@ class VipPulsindex extends React.Component{
                                 </div>
                             </div>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/96230")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/02/2F/rAoKmVyBFvKAeB7ZAABpi5UOH9I692.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}> 法语音乐剧《摇滚红与黑》-广州站</div>
@@ -238,7 +238,7 @@ class VipPulsindex extends React.Component{
                                 </div>
                             </div>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/100451")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/03/3F/rAoKNVzc_luAAYj0AABKXDcBW98962.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}>世界经典原版音乐剧《猫》CATS -广州站</div>
@@ -252,7 +252,7 @@ class VipPulsindex extends React.Component{
                         </div>
                         <div className={"qxy_vip-plus-discount-grid__row"}>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/99351")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/02/73/rAoKmVzASuqAQKDaAACnh31kqr4797.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}>【小橙堡微剧场】西班牙 |星光浪漫互动音乐剧场《月光摇篮曲》--北京站</div>
@@ -264,7 +264,7 @@ class VipPulsindex extends React.Component{
                                 </div>
                             </div>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/103687")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/03/26/rAoKNVzIFqmAcoswAABmDtTNJyI871.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}>【万有音乐系】《小城故事》——陈佳2019个人演唱会</div>
@@ -276,7 +276,7 @@ class VipPulsindex extends React.Component{
                                 </div>
                             </div>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/103522")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/02/83/rAoKNVw2Ba6AOX9yAACTafVkRpU195.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}>【万有音乐系】“永恒旋律”经典影视系列主题音乐会-旭和坊团 深圳站</div>
@@ -290,7 +290,7 @@ class VipPulsindex extends React.Component{
                         </div>
                         <div className={"qxy_vip-plus-discount-grid__row"}>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/93633")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/03/3B/rAoKNVzYzp2AI3wCAAD-QbZWK0w494.gif" alt=""/>
                                         <div className={"qxy_show-cell__name"}>曹禺经典巨作-话剧《雷雨》-固安</div>
@@ -302,7 +302,7 @@ class VipPulsindex extends React.Component{
                                 </div>
                             </div>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/93629")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/02/40/rAoKmVyS_FaACwYzAAC9SzDif6w720.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}>【小橙堡】趣味情景互动音乐秀《我是演奏家》-南京站</div>
@@ -314,7 +314,7 @@ class VipPulsindex extends React.Component{
                                 </div>
                             </div>
                             <div>
-                                <div className={"qxy_vip-plus-discount-show-cell"}>
+                                <div className={"qxy_vip-plus-discount-show-cell"} onClick={()=>{this.props.history.push("/ticket/91535")}}>
                                     <div className={"qxy_show-cell"}>
                                         <img src="https://image.juooo.com/group1/M00/02/53/rAoKNVvfvMaAcRLVAAC_uXy3mac360.jpg" alt=""/>
                                         <div className={"qxy_show-cell__name"}>【小橙堡】经典成长童话《匹诺曹》-南京站</div>

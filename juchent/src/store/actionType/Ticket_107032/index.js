@@ -1,0 +1,1 @@
+export const CHANGE_TIT_INFO = 'CHANGE_TIT_INFO';

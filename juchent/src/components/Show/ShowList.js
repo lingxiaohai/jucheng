@@ -9,6 +9,7 @@ import Creator,{changeShowcategoryList} from "../../store/actionCreator/Show";
 class ShowList extends React.Component{
 
     render() {
+        console.log(this.props.category_list,7777777777777)
         return(
             <section id="qxy_recommend_wrap">
                 <ul>
@@ -16,7 +17,7 @@ class ShowList extends React.Component{
                     {
                         this.props.category_list.map((v,i)=>(
 
-                            <li key={i}>
+                            <li key={i} onClick={()=>{this.props.history.push("/ticket/"+v.schedular_id)}}>
                                 <img src={v.pic} alt=""/>
                                 <div>
                                     <p>{v.show_time_top}</p>
@@ -38,7 +39,6 @@ class ShowList extends React.Component{
 
     componentDidMount() {
         this.props.getcategoryList({index:1});
-
     }
 }
 
