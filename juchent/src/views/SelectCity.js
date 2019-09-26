@@ -72,7 +72,7 @@ class SelectCity extends Component{
 
                                     {cityList.map(v=>
 
-                                                <div className={"city-block__row__con"} key={v.id}>
+                                                <div className={"city-block__row__con"} key={v.id} ref={el=>this[v.id]=el}>
                                                     <span className={"city-block__row__con__letter"}>{v.id}</span>
                                                             <ul  className={"city-block__row__con__wrap"}>
                                                                 {v.list.map(item=>
@@ -97,7 +97,10 @@ class SelectCity extends Component{
                         <span className={"city-nav__lab"}>当前</span>
                         <span className={"city-nav__lab"}>定位</span>
                         <span className={"city-nav__lab"}>热门</span>
-                        <span className={"city-nav__lab"}>A</span>
+                        {cityList.map(v=>
+
+                        <span className={"city-nav__lab"} key={v.id} onClick={()=>this[v.id].scrollIntoView(true)} >{v.id}</span>
+                        )}
                     </section>
                 </div>
 

@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, {Component,createContext} from "react"
 import Search from "../components/home/Search"
 import "../assets/css/home.css"
 import "../assets/css/main.css"
@@ -30,9 +30,9 @@ class Page extends Component {
                 <main className={"main-wrap"}>
                     <section className={"main-wrap__content"}>
                         <div className="banner-wrap home-banner-wrap">
-                            <div className="swiper-container swiper-container-horizontal">
-                                <Slideshow swiperList={this.props}></Slideshow>
-                            </div>
+
+                                <Slideshow></Slideshow>
+
                         </div>
 
                         <section className="advertion-wrap">
@@ -59,11 +59,16 @@ class Page extends Component {
     }
 
     componentDidMount() {
+
         this.props.getSwiper();
 
-        this.setState({
-            swiperList: this.props
-        })
+
+        let city_id = 0;
+        if(localStorage.city){
+          city_id=JSON.parse(localStorage.city).city_id
+        }
+        this.props.getSwiper(city_id);
+
 
 
     }

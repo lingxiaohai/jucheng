@@ -212,7 +212,7 @@ class Plusindex extends React.Component{
                                     </div>
                                 </div>
                             </div>
-                            <button className={"qxy_plus__no__rights__grid__btn"} >立即开通 <span>￥</span><span>99</span>/年</button>
+                            <button className={"qxy_plus__no__rights__grid__btn"} onClick={()=>{this.props.history.push("/vip/index/1")}}>立即开通 <span>￥</span><span>99</span>/年</button>
                         </div>
 
                     </div>

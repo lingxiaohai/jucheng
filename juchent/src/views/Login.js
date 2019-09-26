@@ -1,8 +1,31 @@
 import React,{Component} from "react"
 import "../assets/css/login.css"
+import axios from "axios"
 export default class Login extends Component{
-
+    constructor(){
+        super();
+        this.state = {
+            inputValue:""
+        }
+    }
+    changeValue(e){
+        this.setState({
+            inputValue:e.target.value
+        })
+    }
+   async register(){
+        console.log(this.state.inputValue,this.refs["passWord"].value)
+       const {data} = await axios.post("/logins/adminLogin",{
+            adminName:this.state.inputValue,
+            passWord:this.refs["passWord"].value
+        })
+       if(data.ok===1){
+           localStorage.userName=data.adminName;
+           this.props.history.push("/My");
+       }
+    }
     render() {
+        // console.log(this.props);
         return(
             <div className="views login_bg">
                     <div className="navbar">
@@ -22,20 +45,24 @@ export default class Login extends Component{
                                     <form>
                                         <ul className="lg-list">
                                             <li className="lg-item">
-                                                <input type="text" placeholder="请输入手机号/邮箱" className="lg-input" name="tel"/>
-                                                <div className="remove-btn" style={{display: "none"}}></div>
+                                                <input type="text" value={this.state.inputValue} placeholder="请输入手机号/邮箱" className="lg-input" name="tel"
+                                                    onChange={this.changeValue.bind(this)}
+                                                />
+                                                {/*<div className="remove-btn" style={{display: "none"}}></div>*/}
                                             </li>
                                             <li className="lg-item">
-                                                <input type="password" placeholder="请输入密码" className="lg-input pwd-input" name="pwd"/>
+                                                <input type="password" ref={"passWord"} placeholder="请输入密码" className="lg-input pwd-input" name="pwd"/>
                                                 <input type="text" placeholder="请输入密码" className="lg-input pwd-input" name="pwd" style={{display: "none"}}/>
-                                                <div className="remove-btn" style={{display: "none"}}></div>
-                                                <div className="btn-eye visualise" style={{display: "none"}}></div>
+                                                {/*<div className="remove-btn" style={{display: "none"}}></div>*/}
+                                                {/*<div className="btn-eye visualise" style={{display: "none"}}></div>*/}
                                             </li>
                                         </ul>
                                     </form>
                                 </div>
                                 <div className="login-btn">
-                                    <a href="#" disabled="disabled" className="btn lg-btn">登录</a>
+                                    <a href="#" disabled="disabled" className="btn lg-btn" style={{background:this.state.inputValue.length>0?"skyblue":""}}
+                                        onClick={this.register.bind(this)}
+                                   >登录</a>
                                 </div>
                                 <div className="login-toggle">
                                     <div className="tg-wrap tg-sms">
@@ -63,9 +90,9 @@ export default class Login extends Component{
                             </div>
                         </div>
                     </div>
-                    <div className="dialog" style={{display:"none"}}>
-                        <p className="tips-text"></p>
-                    </div>
+                    {/*<div className="dialog" style={{display:"none"}}>*/}
+                    {/*    <p className="tips-text"></p>*/}
+                    {/*</div>*/}
                 </div>
         )
     }

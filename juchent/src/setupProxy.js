@@ -7,7 +7,13 @@ module.exports=function (app) {
             "^/home":""
         }
     }));
-
+    app.use("/logins",proxy({
+        target: "http://127.0.0.1",
+        changeOrigin:true,
+        pathRewrite: {
+            "^/logins":""
+        }
+    }))
     //ShowLibrary用  演出表 类型
     app.use("/ShowTpeList",proxy({
         target:"https://m.juooo.com",
@@ -27,5 +33,4 @@ module.exports=function (app) {
 
 };
 
-   
 

@@ -1,6 +1,11 @@
 import React from "react"
 import "../../assets/css/my.css"
+import axios from "axios"
 export default class Mys extends React.Component{
+    // async componentDidMount() {
+    //     const {data} = await axios.get("https://api.juooo.com/user/account/basicInfo?version=6.0.5&referer=2");
+    //     console.log(data,1212)
+    // }
     render(){
         return (
             <div className="mine">

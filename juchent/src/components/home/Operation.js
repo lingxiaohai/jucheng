@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import {NavLink} from "react-router-dom";
 
-class Operation extends Component {
+class  Operation extends Component {
 
     render() {
 
