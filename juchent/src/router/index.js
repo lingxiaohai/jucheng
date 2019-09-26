@@ -1,4 +1,5 @@
-import Home from "../views/Home"
+
+import Home from '../views/Home'
 import My from "../views/My"
 import Login from "../views/Login"
 import Theater from "../views/Theater"

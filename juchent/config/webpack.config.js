@@ -323,6 +323,8 @@ module.exports = function(webpackEnv) {
           test: /\.(js|mjs|jsx|ts|tsx)$/,
           enforce: 'pre',
           use: [
+            'babel-loader',
+            'lazyload-loader',
             {
               options: {
                 formatter: require.resolve('react-dev-utils/eslintFormatter'),
@@ -332,6 +334,8 @@ module.exports = function(webpackEnv) {
               },
               loader: require.resolve('eslint-loader'),
             },
+
+
           ],
           include: paths.appSrc,
         },

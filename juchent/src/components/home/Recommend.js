@@ -70,7 +70,7 @@ class Recommend extends React.Component {
                                 <div className="item-desc">
                                     <p className="show-date"><strong>{i.show_time}</strong> <span>{i.week}</span></p>
                                     <a href="/ticket/103486">
-                                        <h3 className="title text-double">{i.show_name}
+                                        <h3 className="titles text-double">{i.show_name}
                                            </h3>
                                     </a>
                                     <p className="venue text-single">{i.c_name} | {i.v_name}</p>

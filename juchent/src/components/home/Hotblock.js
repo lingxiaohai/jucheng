@@ -51,18 +51,20 @@ class Hotblock extends React.Component {
     }
 
     initSwiper() {
-        setTimeout(() => {
+
 
             let container =this.container;
             new Swiper(container, {
                 autoplay: false,
                 freeMode: false,
+                observer: true,
+                observeParents: true,
                 freeModeSticky: true,
                 centeredSlides: false,
                 slidesPerView: "auto",
             })
 
-        }, 500)
+
     }
 
     componentDidMount() {
