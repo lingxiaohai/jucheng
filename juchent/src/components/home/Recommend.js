@@ -10,32 +10,31 @@ const styles = {
 class Recommend extends React.Component {
 
     ListArr = [];
-    index=1;
+    index = 1;
     state = {
         items: [],
         hasMore: true
     };
 
     fetchMoreData = () => {
-
+         console.log(11111)
         // a fake async api call like which sends
         // 20 more records in .5 secs
         setTimeout(() => {
-           this.getshowList(this.index++)
+            this.getshowList(this.index++)
         }, 500);
     };
 
 
-
     async getshowList(index = 1) {
 
-        const {data} = await axios.get("/home/getRecommendShow?cityAdd=SZ&page="+index+"&version=6.0.5&referer=1");
+        const {data} = await axios.get("/home/getRecommendShow?cityAdd=SZ&page=" + index + "&version=6.0.5&referer=1");
 
-        if(data.data.recommend_show_list.length<=8) {
-            this.setState({ hasMore: false });
+        if (data.data.recommend_show_list.length <= 8) {
+            this.setState({hasMore: false});
             return;
         }
-        if (data.code==="200") this.setState({items:this.state.items.concat(data.data.recommend_show_list) })
+        if (data.code === "200") this.setState({items: this.state.items.concat(data.data.recommend_show_list)})
 
     }
 
@@ -64,17 +63,18 @@ class Recommend extends React.Component {
                         {this.state.items.map((i, index) => (
                             <li key={index}>
                                 <div className="show-icon"><a href={`/ticket/${i.sche_id}`}><img
-                                    src={i.schePic} /></a>
+                                    src={i.schePic}/></a>
                                     <div className="juooo_sponsor"><i className="logo_i"></i></div>
                                 </div>
                                 <div className="item-desc">
                                     <p className="show-date"><strong>{i.show_time}</strong> <span>{i.week}</span></p>
                                     <a href="/ticket/103486">
                                         <h3 className="titles text-double">{i.show_name}
-                                           </h3>
+                                        </h3>
                                     </a>
                                     <p className="venue text-single">{i.c_name} | {i.v_name}</p>
-                                    <p className="price"><strong className="c_ff6">￥{i.high_price}</strong> <span>起</span></p>
+                                    <p className="price"><strong className="c_ff6">￥{i.high_price}</strong>
+                                        <span>起</span></p>
                                 </div>
                             </li>
                         ))}

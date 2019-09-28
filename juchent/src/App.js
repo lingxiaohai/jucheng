@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import routerArr from "./router/index"
-import { BrowserRouter as Router,Route,NavLink,Switch} from "react-router-dom"
+import { BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import {connect} from "react-redux"
 import { bindActionCreators} from "redux"
 
