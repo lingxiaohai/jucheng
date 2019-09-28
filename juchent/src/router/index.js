@@ -15,7 +15,16 @@ import Ticket_107032 from '../views/Ticket_107032'
 import SelectCity from "../views/SelectCity"
 import TheIndex from "../views/TheIndex"
 import TheShpList from "../views/TheShpList"
+import TicketInfo from '../views/TicketInfo'
+
 const route =[
+    {
+        path : "/tour/tourshowinfo",
+        name : 'ticketInfo',
+        component : TicketInfo
+
+    }
+    ,
     {
         path : "/Theater/index",
         name : "index",
@@ -44,7 +53,7 @@ const route =[
     }
     ,
     {
-        path : "/ticket/107032",
+        path : "/ticket/:schedularId",
         name : "ticket_107032",
         component : Ticket_107032
     }

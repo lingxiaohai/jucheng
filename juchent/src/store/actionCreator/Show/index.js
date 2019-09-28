@@ -58,14 +58,13 @@ export  default {
             {
                 console.log(cityid,8888);
                 dispatch(changeShowcategoryTypeListMore({data:data.data.list}));
-
             }
         }
     },
     getcityList(){
         return async(dispatch)=>{
             const {data}  =  await axios.get("/ShowTpeList/Search/getCity?version=6.0.5&referer=2");
-
+            
             dispatch(changeShowCityList(data.data.city_list))
         }
     },
@@ -77,6 +76,4 @@ export  default {
             this.getcategoryList({cityid,id})
         }
     }
-
-
 }

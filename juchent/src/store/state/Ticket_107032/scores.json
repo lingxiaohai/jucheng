@@ -1,0 +1,63 @@
+{
+    "list": [{
+        "change_reason": "3",
+        "change_type": "1",
+        "createtime": "2019.09.26 08:38:01",
+        "id": "8454499",
+        "operator": "system",
+        "reason": "每日登录",
+        "scores": "2",
+        "user_id": "6831395"
+      },
+      {
+        "change_reason": "3",
+        "change_type": "1",
+        "createtime": "2019.09.19 06:43:02",
+        "id": "8428023",
+        "operator": "system",
+        "reason": "每日登录",
+        "scores": "2",
+        "user_id": "6831395"
+      },
+      {
+        "change_reason": "3",
+        "change_type": "1",
+        "createtime": "2019.09.18 04:43:02",
+        "id": "8423057",
+        "operator": "system",
+        "reason": "每日登录",
+        "scores": "2",
+        "user_id": "6831395"
+      },
+      {
+        "change_reason": "3",
+        "change_type": "1",
+        "createtime": "2019.09.17 14:22:01",
+        "id": "8420270",
+        "operator": "system",
+        "reason": "每日登录",
+        "scores": "2",
+        "user_id": "6831395"
+      },
+      {
+        "change_reason": "3",
+        "change_type": "1",
+        "createtime": "2019.09.16 08:04:01",
+        "id": "8415164",
+        "operator": "system",
+        "reason": "每日登录",
+        "scores": "2",
+        "user_id": "6831395"
+      },
+      {
+        "change_reason": "3",
+        "change_type": "1",
+        "createtime": "2019.09.12 17:34:01",
+        "id": "8405103",
+        "operator": "system",
+        "reason": "每日登录",
+        "scores": "2",
+        "user_id": "6831395"
+      }
+    ]
+  }

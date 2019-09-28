@@ -1,24 +1,24 @@
 import React from 'react';
 import store from '../../store'
 import axios from 'axios'
-import {changeTitInfo} from '../../store/actionCreator/Ticket_107032'
-
+import {changeInfo} from '../../store/actionCreator/Ticket_107032/try'
+import {NavLink} from 'react-router-dom'
 
 // console.log(999,store.getState())
 export default class Recommend extends React.Component{
     constructor(){
         super();
         this.state = {
-            recommendInfo : store.getState().TitInfo.titInfo
+            recommendInfo : store.getState().Try.initInfo
         }
     }
 
     async componentDidMount(){
         const {data} = await axios.get('https://api.juooo.com/Show/Search/getShowList?category=79&city_id=1&version=6.0.5&referer=2');
         // console.log(123,data.data)
-        store.dispatch(changeTitInfo(data.data));
+        store.dispatch(changeInfo(data.data));
         this.setState({
-            recommendInfo : store.getState().TitInfo.titInfo
+            recommendInfo : store.getState().Try.initInfo
         })
         // console.log(897,this.state.recommendInfo)
 
@@ -69,10 +69,13 @@ export default class Recommend extends React.Component{
                     })}
                
                 </div>
-                <div data-v-3c4bc15e className="t-recommend__more">
-                    查看更多演出
-                    <i data-v-3c4bc15e className="iconfont icon-you t-recommend__more__arrow"></i>
-                </div>
+                <NavLink to={'/show/showsLibrary/0/5'}>
+                    <div data-v-3c4bc15e className="t-recommend__more">
+                        查看更多演出
+                        <i data-v-3c4bc15e className="iconfont icon-you t-recommend__more__arrow"></i>
+                    </div>
+                </NavLink>
+                
             </div>
         )
     }

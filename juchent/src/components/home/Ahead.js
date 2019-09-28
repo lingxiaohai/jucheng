@@ -4,6 +4,8 @@ import {bindActionCreators} from "redux"
 import svipList from "../../store/actionCreator/Svip";
 import Swiper from 'swiper/dist/js/swiper.js'
 import 'swiper/dist/css/swiper.min.css'
+import {NavLink} from "react-router-dom";
+
 
 class Ahead extends Component {
     constructor(props) {
@@ -12,6 +14,7 @@ class Ahead extends Component {
             priorList: this.props.priorList
         }
     }
+   
 
     render() {
         let {priorList} = this.props
@@ -59,9 +62,9 @@ class Ahead extends Component {
                                             <span className="vip-ahead__list__info__tip__text">开始</span>
                                         </p>
                                     </div>
-                                    <a href="#">
-                                        <span className="vip-ahead__list__lab">开售提醒</span>
-                                    </a>
+                                    <NavLink to={"/ticket/107032"}  href="#">
+                                        <span  className="vip-ahead__list__lab">开售提醒</span>
+                                    </NavLink>
                                 </div>
 
                             </div>

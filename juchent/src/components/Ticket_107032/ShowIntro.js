@@ -1,9 +1,14 @@
 import React from 'react';
 
 export default class ShowIntro extends React.Component{
+    showMsg(){
+       this.refs.more.style.display = "none";
+       this.refs.mask.style.display = "none";
+       this.refs.intro.style.height = "auto"
+    }
     render(){
         return(
-            <div data-v-7b906092 data-v-277f55d8 className="t-intro detail__intro t-center__left__intro">
+            <div ref="intro" data-v-7b906092 data-v-277f55d8 className="t-intro detail__intro t-center__left__intro">
             <div data-v-7b906092 className="t-intro__title">演出介绍</div>
             <div data-v-7b906092 className="t-intro__content">
                 <p>
@@ -247,10 +252,8 @@ export default class ShowIntro extends React.Component{
                 <p style={{whiteSpace:" normal; textAlign: center"}}>&nbsp;</p>
                 <p style={{textAlign:" center"}}><br/></p>
             </div>
-
-            
-            <div data-v-7b906092 className="t-intro__mask">展示全部</div>
-            <div data-v-7b906092 className="t-intro__more"></div>
+            <div ref="mask" onClick={this.showMsg.bind(this)} data-v-7b906092 className="t-intro__mask">展示全部</div>
+            <div ref="more" data-v-7b906092 className="t-intro__more"></div>
         </div>
         )
     }

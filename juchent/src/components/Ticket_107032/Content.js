@@ -1,35 +1,27 @@
 import React,{Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux'
+import Creator from '../../store/actionCreator/Ticket_107032'
 // import {withRouter} from 'react-router-dom'
-import axios from 'axios';
+// import axios from 'axios';
 import store from '../../store';
 import {changeTitInfo} from '../../store/actionCreator/Ticket_107032'
 
+
 class Content extends Component{
-    constructor(){
-        super();
-        this.state = {
-            titInfo : store.getState().TitInfo.titInfo
-        } 
-    }
-    async componentDidMount(){
-        const {data} = await axios.get('https://api.juooo.com/Schedule/Schedule/getScheduleInfo?schedular_id=107032&version=6.0.5&referer=2')
-        // console.log(130,data.data)
-        // console.log(data.data.schedular_id)
-       
-        store.dispatch(changeTitInfo(data.data));
-        this.setState({
-            titInfo : store.getState().TitInfo.titInfo
-        })
-            
-        
-        
-    }
+    
+
     render(){
-        // console.log(112233,this.state.titInfo)
-        let titInfo = this.state.titInfo;
-        let share_data = titInfo.share_data || {};
-        let static_data = titInfo.static_data || {};
+        // console.log(112233,this.state)
+        // const picInfo = this.state.TitInfo.picInfo || {}
+        // console.log(333333,picInfo)
+        const picInfo = this.props.picInfo || {};
+        const share_data = picInfo.share_data || {};
+        const static_data = picInfo.static_data || {};
+        // console.log(static_data,852)
+
         return(
+
             <>
                 <div data-v-04d278ca className="t-brief__primary__fg__content">
                     <div data-v-681cfcc8 data-v-04d278ca className="t-cover t-brief__primary__fg__content__cover">
@@ -52,7 +44,9 @@ class Content extends Component{
                                 <div data-v-04d278ca className="t-brief__primary__fg__content__info__tag"></div>
                             </div>
                             <div data-v-04d278ca className="t-brief__primary__fg__content__info__price">
-                                <span data-v-04d278ca className="t-brief__primary__fg__content__info__price__range">{static_data.price_range}</span>
+                                <span data-v-04d278ca className="t-brief__primary__fg__content__info__price__range">
+                                     {static_data.price_range}
+                                </span>
                                 <span data-v-04d278ca className="t-brief__primary__fg__content__info__price__type">
                                     <span data-v-04d278ca className="t-brief__primary__fg__content__info__price__type__plus"></span>
                                 </span>
@@ -63,6 +57,23 @@ class Content extends Component{
             </>
         )
     }
+    componentDidMount(){
+        // console.log(this.props,666666);
+        // let schedularId = this.props.match.params.schedularId || this.props.schedularId
+        this.props.getSchedularId(this.props.schedularId)
+    }
+    
 }
 
-export default Content;
+function mapStateToProps(state,props){
+    // console.log(state,88888888888);
+    return {
+        schedularId : state.TitInfo.schedularId,
+        picInfo : state.TitInfo.picInfo
+    }
+}
+function mapDispatchToProps (dispatch, props){
+    return bindActionCreators(Creator,dispatch)
+}
+
+ export default connect(mapStateToProps, mapDispatchToProps)(Content);
