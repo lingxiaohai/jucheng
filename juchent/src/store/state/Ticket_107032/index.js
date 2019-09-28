@@ -1,4 +1,7 @@
 export default {
     titInfo : {},
-    secondaryInfo : {}
+    secInfo : {},
+    schedularId : 107032,
+    picInfo : {}
+   
 }

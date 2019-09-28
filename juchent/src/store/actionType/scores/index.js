@@ -1,0 +1,1 @@
+export const CHANGE_MOCK_LIST = 'CHANGE_MOCK_LIST'

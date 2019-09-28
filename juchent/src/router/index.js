@@ -27,8 +27,19 @@ import VipPulsindex from "../views/VipPulsindex"
 
 import TheIndex from "../views/TheIndex"
 import TheShpList from "../views/TheShpList"
+<<<<<<< HEAD
+import TicketInfo from '../views/TicketInfo'
+=======
+>>>>>>> 2fc3aa817677005ac024ff93ee2a87d5e1adee58
 
 const route =[
+    {
+        path : "/tour/tourshowinfo",
+        name : 'ticketInfo',
+        component : TicketInfo
+
+    }
+    ,
     {
         path : "/Theater/index",
         name : "index",
@@ -57,7 +68,11 @@ const route =[
     }
     ,
     {
+<<<<<<< HEAD
+        path : "/ticket/:schedularId",
+=======
         path : "/ticket/:id",
+>>>>>>> 2fc3aa817677005ac024ff93ee2a87d5e1adee58
         name : "ticket_107032",
         component : Ticket_107032
     }
