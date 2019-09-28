@@ -9,8 +9,9 @@ class  Operation extends Component {
             <div className="operation">
 
                 <ul className="operation__ul operation--top">
-                    <li className="operation__item">
-                        <a className="operation__item__block">
+
+                    <li className="operation__item" >
+                        <NavLink to={"/plus/index"}><a className="operation__item__block">
                             <div>
                                 <h3 className="operation__item__block__title">橙PLUS卡</h3>
 
@@ -19,8 +20,9 @@ class  Operation extends Component {
                             <div className="operation__item__block__icon">
                                 <img src="https://image.juooo.com/group1/M00/02/D0/rAoKmV0jZBGAD_e4AAAE27hwBgs927.png"/>
                             </div>
-                        </a>
+                        </a></NavLink>
                     </li>
+
                     <li className="operation__item">
                         <a className="operation__item__block">
                             <div>
@@ -35,6 +37,7 @@ class  Operation extends Component {
                         </a>
                     </li>
                 </ul>
+
                 <ul className="operation__ul operation--bottom">
                     <li className="operation__item">
                         <NavLink to={"/myjuooo/myintegral"} className="operation__item__block">

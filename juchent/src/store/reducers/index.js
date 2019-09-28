@@ -5,6 +5,11 @@ import SvipList from "./Svip"
 import JyuanList from "./juyuna"
 import TitInfo from './Ticket_107032'
 import homeblock from "./homeblock"
+
+import searchList  from "./Search"
+import yxgpList  from "./VipPulus"
+
+
 import CategorList from "./Category"
 import cityList from "./City"
 import MyintegralList from './scores'
@@ -17,10 +22,16 @@ export default combineReducers({
     JyuanList,
     TitInfo,
     homeblock,
+    searchList,
     CategorList,
     cityList,
+<<<<<<< HEAD
     MyintegralList,
     Try
+=======
+    yxgpList
+
+>>>>>>> 2fc3aa817677005ac024ff93ee2a87d5e1adee58
 })
 
 

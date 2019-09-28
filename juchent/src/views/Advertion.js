@@ -39,7 +39,7 @@ class Advertion extends React.Component{
             <div>
                 <div id="qxy_box">
                     <div id="qxy_header">
-                        <i className="iconfont iconright1" onClick={()=>{this.props.history.go(-1)}}></i>
+                        <i className="iconfont iconright" onClick={()=>{this.props.history.go(-1)}}></i>
                         <span>演出</span>
                         <div  >
                             <NavBar
@@ -81,7 +81,7 @@ class Advertion extends React.Component{
 
                     <ShowTypeList> </ShowTypeList>
 
-                    <ShowList > </ShowList>
+                    <ShowList {...this.props}> </ShowList>
 
                 </div>
             </div>

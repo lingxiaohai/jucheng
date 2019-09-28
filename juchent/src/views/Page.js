@@ -61,6 +61,9 @@ class Page extends Component {
     componentDidMount() {
         this.props.getSwiper();
 
+        this.props.getSwiper();
+
+
         let city_id = 0;
         if(localStorage.city){
           city_id=JSON.parse(localStorage.city).city_id

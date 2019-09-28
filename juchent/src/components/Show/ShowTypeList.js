@@ -4,6 +4,10 @@ import {bindActionCreators} from 'redux'
 import axios from 'axios'
 import store from '../../store/index'
 import '../../assets/css/ShowLibrary.css'
+
+import "../../assets/css/antd.css"
+
+
 import { BrowserRouter as Router,Route,NavLink,Switch} from "react-router-dom"
 import Creator, {changeShowcategoryList, changeShowcategoryTypeList} from "../../store/actionCreator/Show";
 import City from './CityList'
@@ -36,7 +40,8 @@ class ShowTypeList extends React.Component{
     }
     componentDidMount() {
         let paramstypelistid =this.props.id;
-        console.log(paramstypelistid,"--------------")
+        // console.log(paramstypelistid,"--------------")
+        // // console.log(this.props,"***********")
         this.props.getcategorytypeList({id:0,cityid:0});
     }
 }
