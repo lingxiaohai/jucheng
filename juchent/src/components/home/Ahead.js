@@ -35,7 +35,7 @@ class Ahead extends Component {
 
                 </a>
 
-                <div className="swiper-container home-banner-wrap" ref='swiper-container'>
+                <div className="swiper-container home-banner-wrap" ref={el=>this.connainer=el}>
                     <div className="swiper-wrapper">
                         {priorList.map(v =>
                             <div className={"swiper-slide"} key={v.schedular_id}>
@@ -68,7 +68,7 @@ class Ahead extends Component {
                         )}
                     </div>
                     <div className="swiper-pagination vip-pagination swiper-pagination-bullets"
-                         ref={"swiper-pagination"}></div>
+                         ref={el=>this.page=el}></div>
                 </div>
             </section>
         )
@@ -76,11 +76,12 @@ class Ahead extends Component {
 
     handleInitialization() {
 
-        let item = this.refs['swiper-container'];
-        let page = this.refs['swiper-pagination'];
+        let item = this.connainer;
+        let page = this.page;
          this.swiper =  new Swiper(item, {
                 loop: true,
              spaceBetween : 0,
+             centeredSlides : true,
                 speed: 1000,
                 autoplay: {
                     disableOnInteraction: false,

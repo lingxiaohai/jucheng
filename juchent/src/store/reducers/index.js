@@ -1,8 +1,6 @@
 import {combineReducers}  from "redux"
 import SwiperList from "./home"
-
 import ShowTypeList from './Show'
-
 import SvipList from "./Svip"
 import JyuanList from "./juyuna"
 import homeblock from "./homeblock"
@@ -10,7 +8,7 @@ import homeblock from "./homeblock"
 import CategorList from "./Category"
 
 import cityList from "./City"
-
+import ExclusiveDiscount from "./ExclusiveDiscount";
 export default combineReducers({
     SvipList,
     SwiperList,
@@ -18,7 +16,8 @@ export default combineReducers({
     JyuanList,
     homeblock,
     CategorList,
-    cityList
+    cityList,
+    ExclusiveDiscount
 })
 
 

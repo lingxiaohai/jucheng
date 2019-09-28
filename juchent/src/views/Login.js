@@ -32,14 +32,16 @@ export default class Login extends Component{
                         <div className="navbar-inner navbar-on-center">
                             <div className="left">
                                 <a href="#" className="link">
-                                    <span className="iconfont">&#xeba1;</span>
+                                    <span className="iconfont" onClick={()=>{
+                                        this.props.history.push("/")
+                                    }}>&#xeba1;</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div className="main">
                         <div className="login-wrap">
-                            <h1 className="title login-title">欢迎来到聚橙网</h1>
+                            <h1 className="xtitle login-xtitle">欢迎来到聚橙网</h1>
                             <div className="binded-iphone">
                                 <div className="login-area">
                                     <form>

@@ -102,10 +102,10 @@ html,body{
 .views .login-wrap {
     padding-top: 57.3051px;
 }
-.views .login-wrap .login-title {
+.views .login-wrap .login-xtitle {
     text-align: center;
 }
-.views .login-wrap .title {
+.views .login-wrap .xtitle {
     height: 0px;
     font-size: 25px;
     font-weight: 700;

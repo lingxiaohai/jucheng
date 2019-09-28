@@ -739,6 +739,12 @@
     padding: 0 .4rem;
    
 }
+.my-bullet-active{
+    background: #fff;
+    opacity: 1;
+    width: .34667rem;
+    border-radius: .06667rem;
+}
 
 .recommend-block__wrap{
     overflow: hidden;

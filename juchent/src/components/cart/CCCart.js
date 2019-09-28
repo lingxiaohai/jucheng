@@ -5,10 +5,10 @@ export default class CCCart extends React.Component{
         return (
             <div className="my-ticket-list">
                 <div className="ticket-list">
-                    <section className="title ticket-list__title">
-                        <span className="title__text">票夹</span>
-                        <i className="iconfont icon-icon_left title__back"></i>
-                        <i className="iconfont icon-sangedian title__ellipsis"></i>
+                    <section className="ftitle ticket-list__title">
+                        <span className="ftitle__text">票夹</span>
+                        <i className="iconfont icon-icon_left ftitle__back"></i>
+                        <i className="iconfont icon-sangedian ftitle__ellipsis"></i>
                     </section>
                     <div className="ticket-empty">
                         <img
