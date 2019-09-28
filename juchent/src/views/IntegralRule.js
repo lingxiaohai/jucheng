@@ -2,28 +2,41 @@ import React,{Component} from 'react';
 import '../assets/css/integralRule.css';
 
 export default class IntegralRule extends Component{
+    goBack(){
+		this.props.history.go(-1);
+	}
+	showBtn(){
+		this.refs.mark.style.display = "block";
+		this.refs.markBtn.style.display = "block";
+	}
+	toHome(){
+		this.props.history.push("/");
+	}
+	toMy(){
+		this.props.history.push("/my");
+	}
     render(){
         return(
             <div>
                 <div className="views">
                     <header className="l-navbar">
                         <div className="l-navbar-inner">
-                            <div className="l-left">
+                            <div onClick={this.goBack.bind(this)} className="l-left">
                                 <a href="#" className="l-link"><span className="iconfont icon-zuo"></span></a>
                             </div>
                             <div className="l-center">
                                 积分规则
                             </div>
-                            <div className="l-right">
+                            <div onClick={this.showBtn.bind(this)} className="l-right">
                                 <a href="#"><span className="iconfont icon-gengduo"></span></a>
                             </div>
                         </div>
                     </header>
-                    <div className="l-shadow-bg l-js-shadow-bg"></div>
-                    <div className="l-back-wrapper">
+                    <div ref="mark" className="l-shadow-bg l-js-shadow-bg"></div>
+                    <div ref="markBtn" className="l-back-wrapper">
                         <div className="l-triangle"></div>
-                        <a className="l-to-home" href="#">首页</a>
-                        <a className="l-myjuooo" href="#">我的聚橙</a>
+                        <a onClick={this.toHome.bind(this)} className="l-to-home" href="#">首页</a>
+                        <a onClick={this.toMy.bind(this)} className="l-myjuooo" href="#">我的聚橙</a>
                     </div>
 
 

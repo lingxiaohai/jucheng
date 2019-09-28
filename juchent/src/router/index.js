@@ -10,10 +10,18 @@ import Searched from '../views/Searched'
 import Myjuooo from "../views/Myjuooo"
 import MyIntegral from "../views/MyIntegral"
 import IntegralRule from "../views/IntegralRule"
-import MyjuoooIndex from "../views/MyjuoooIndex.js"
+import MyjuoooIndex from "../views/MyjuoooIndex"
+import Ticket_107032 from '../views/Ticket_107032'
 import SelectCity from "../views/SelectCity"
+
+import Plusindex from "../views/Plusindex"
+import ShopPlusby from "../views/ShopPlusBuy"
+import VipPulsindex from "../views/VipPulsindex"
+
+
 import TheIndex from "../views/TheIndex"
 import TheShpList from "../views/TheShpList"
+
 import ExclusiveDiscount from "../views/ExclusiveDiscount"
 const route =[
     {
@@ -49,6 +57,12 @@ const route =[
     }
     ,
     {
+        path : "/ticket/:id",
+        name : "ticket_107032",
+        component : Ticket_107032
+    }
+    ,
+    {
         path : "/Myjuooo/integralRule",
         name : "integralRule",
         component : IntegralRule
@@ -79,6 +93,25 @@ const route =[
         path:"/Scores/index",
         name:"Scores",
         component:Scores
+    }
+    ,
+    {
+        path:"/plus/index",
+        name:"plus/index",
+        component:Plusindex
+    }
+    ,
+    {
+        path:"/vip/index/1",
+        name:"/vip/index/1",
+        component:VipPulsindex
+    }
+    ,
+
+    {
+        path:"/shop/plus/buy",
+        name:"/shop/plus/buy",
+        component:ShopPlusby
     }
     ,
 

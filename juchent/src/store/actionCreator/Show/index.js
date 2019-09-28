@@ -56,7 +56,6 @@ export  default {
             }
             else
             {
-                console.log(cityid,8888);
                 dispatch(changeShowcategoryTypeListMore({data:data.data.list}));
 
             }
@@ -70,8 +69,7 @@ export  default {
         }
     },
     gitcityId(cityid,id){
-        // console.log(cityid,789456);
-        console.log(789456);
+
         return  (dispatch)=>{
             dispatch(changeShowCityId(cityid));
             this.getcategoryList({cityid,id})

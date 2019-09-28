@@ -5,6 +5,7 @@ import routerArr from "./router/index"
 import { BrowserRouter as Router,Route,NavLink,Switch} from "react-router-dom"
 import {connect} from "react-redux"
 import { bindActionCreators} from "redux"
+
 class App extends React.Component{
 
     render() {
