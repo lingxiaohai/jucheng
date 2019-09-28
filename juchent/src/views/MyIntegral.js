@@ -1,26 +1,30 @@
 import React,{Component} from 'react';
 import "../assets/css/myintegral.css"
 import axios from 'axios';
+import store from '../store'
+import {changeMockList} from  '../store/actionCreator/scores'
 
+// console.log(66655,store.getState())
 class MyIntegral extends Component{
-	
 	constructor(){
 		super();
 		this.state = {
-			myintegralList : []
+			mockList : store.getState().MyintegralList.mockList
 		}
 	}
-	async getMyintegralList(){
-		
-		const data = await axios.get('https://api.juooo.com/Show/Search/getShowList?keywords=%E6%9D%8E%E8%8D%A3%E6%B5%A9&page=1&sort_type=1&version=6.0.5&referer=2');
-		console.log(110,data);
-	}
-	componentDidMount(){
-		
-		this.getMyintegralList();
-		console.log(112233)
+	
+	async componentDidMount(){
+		const {data} = await axios.get('https://www.easy-mock.com/mock/5d8e67e8e53eef470c5eac37/scores/scores');
+		console.log(666,data.list)
+		store.dispatch(changeMockList(data.list))
+		this.setState({
+			mockList : store.getState().MyintegralList.mockList
+		})
 	}
     render(){
+		const mockList = this.state.mockList || []
+		// console.log(234543234,mockList)
+
         return(
             <div>
               <div className="lzy-views">
@@ -47,24 +51,30 @@ class MyIntegral extends Component{
 					<div className="lzy-banner">
 						<a onClick={this.toRule.bind(this)} className="lzy-rule" href="#"><span className="iconfont icon-xinxi"></span>积分规则</a>
 						<p className="lzy-text">可用积分</p>
-						<p className="lzy-num">8</p>
-						<a onClick={this.toScoresIndex.bind(this)} className="lzy-shop-integral" href="#">积分商城</a>
+						<p className="lzy-num">
+							{mockList.length*2}
+						</p>
+						<a className="lzy-shop-integral" href="#">积分商城</a>
 					</div>
 					<div className="lzy-part lzy-integral-wrap">
 						<div className="lzy-little">积分明细</div>
 						<div className="lzy-part-box lzy-integral-list lzy-js-integral-list" >
-							<div className="lzy-item lzy-integral">
+							{/* <div className="lzy-item lzy-integral">
 								<p className="lzy-name">每日登录</p>
 								<p className="lzy-time">2019.09.18 04:43:02</p><span className="lzy-add lzy-num">+2</span>
-							</div>
-							<div className="lzy-item lzy-integral">
-								<p className="lzy-name">每日登录</p>
-								<p className="lzy-time">2019.09.18 04:43:02</p><span className="lzy-add lzy-num">+2</span>
-							</div>
-							<div className="lzy-item lzy-integral">
-								<p className="lzy-name">每日登录</p>
-								<p className="lzy-time">2019.09.18 04:43:02</p><span className="lzy-add lzy-num">+2</span>
-							</div>
+							</div> */}
+							{
+								mockList.map((v,i)=>(
+									<div key={i} className="lzy-item lzy-integral">
+										<p className="lzy-name">{v.reason}</p>
+										<p className="lzy-time">
+											{v.createtime}
+										</p>
+										<span className="lzy-add lzy-num">+{v.scores}</span>
+									</div>
+								))
+							}
+							
 						</div>
 					</div>
 				</div>

@@ -1,5 +1,5 @@
 .discount{
-    position: relative;
+    /*position: relative;*/
     height: 100%;
 }
 .discount .discount_head{
@@ -92,7 +92,7 @@ li, ol, ul {
 
 .tab .slide-tab .slide-tab__item.active{
     /* border-bottom: .04rem solid #ff6743; */
-    color: #ff6743;
+    /*color: #ff6743;*/
 }
 .tab .slide-tab .slide-tab__item{
     width: auto;

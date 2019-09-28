@@ -12,7 +12,7 @@ class Search extends Component {
         window.onscroll = function () {
             let topScroll = document.body.scrollTop || document.documentElement.scrollTop;//滚动的距离,距离顶部的距离
 
-             console.log(this.head)
+
             if (topScroll > H) {  //当滚动距离大于H时执行下面的东西
                 // iconfont.style.color = "orange";
                 // fontCol.style.cssText = "color:black;background:white";

@@ -12,7 +12,12 @@ import yxgpList  from "./VipPulus"
 
 import CategorList from "./Category"
 import cityList from "./City"
+
 import ExclusiveDiscount from "./ExclusiveDiscount";
+
+import MyintegralList from './scores'
+import Try from './Ticket_107032/try'
+
 export default combineReducers({
     SvipList,
     SwiperList,
@@ -23,8 +28,14 @@ export default combineReducers({
     searchList,
     CategorList,
     cityList,
+
     ExclusiveDiscount,
+
+
+    MyintegralList,
+    Try,
     yxgpList
+
 
 })
 

@@ -817,7 +817,7 @@
 .recommend-list li .item-desc a {
     display: block;
 }
-.recommend-list li .item-desc .title {
+.recommend-list li .item-desc .titles {
     width: 100%;
     font-size: .45333rem;
     line-height: .6rem;

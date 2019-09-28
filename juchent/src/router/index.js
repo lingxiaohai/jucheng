@@ -1,4 +1,5 @@
-import Home from "../views/Home"
+
+import Home from '../views/Home'
 import My from "../views/My"
 import Login from "../views/Login"
 import Theater from "../views/Theater"
@@ -21,6 +22,7 @@ import VipPulsindex from "../views/VipPulsindex"
 
 import TheIndex from "../views/TheIndex"
 import TheShpList from "../views/TheShpList"
+import TicketInfo from '../views/TicketInfo'
 
 import ExclusiveDiscount from "../views/ExclusiveDiscount"
 const route =[
@@ -28,6 +30,12 @@ const route =[
         path : "/ExclusiveDiscount",
         name : "index",
         component :ExclusiveDiscount,
+    },
+    {
+        path : "/tour/tourshowinfo",
+        name : 'ticketInfo',
+        component : TicketInfo
+
     },
     {
         path : "/Theater/index",
@@ -57,7 +65,8 @@ const route =[
     }
     ,
     {
-        path : "/ticket/:id",
+
+        path:"/ticket/:schedularId",
         name : "ticket_107032",
         component : Ticket_107032
     }

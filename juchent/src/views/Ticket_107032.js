@@ -12,6 +12,12 @@ import CenterLeftTips from '../components/Ticket_107032/CenterLeftTips'
 import Recommend from '../components/Ticket_107032/Recommend'
 
  class Ticket_107032 extends Component{
+     constructor(){
+         super();
+         this.state = {
+        
+         }
+     }
      
 
     render(){

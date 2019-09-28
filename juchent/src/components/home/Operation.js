@@ -40,7 +40,7 @@ class  Operation extends Component {
 
                 <ul className="operation__ul operation--bottom">
                     <li className="operation__item">
-                        <NavLink to={"/Scores/index"} className="operation__item__block">
+                        <NavLink to={"/myjuooo/myintegral"} className="operation__item__block">
                             <div>
                                 <h3 className="operation__item__block__title">积分商城</h3>
                                 <p>用积分,<span className="c_ff6">0元</span>购票

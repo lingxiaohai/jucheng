@@ -45,7 +45,7 @@ export  default {
         }
     },
     getcategoryList({id = 0,index = 1,cityid=0}){
-
+    console.log(id)
         return async(dispatch)=>{
             const {data} = await axios.get(`/ShowList/Show/Search/getShowList?category=${id}&city_id=${cityid}&page=${index}&keywords=&version=6.0.5&referer=2`);
             //
@@ -57,14 +57,13 @@ export  default {
             else
             {
                 dispatch(changeShowcategoryTypeListMore({data:data.data.list}));
-
             }
         }
     },
     getcityList(){
         return async(dispatch)=>{
             const {data}  =  await axios.get("/ShowTpeList/Search/getCity?version=6.0.5&referer=2");
-
+            
             dispatch(changeShowCityList(data.data.city_list))
         }
     },
@@ -75,6 +74,4 @@ export  default {
             this.getcategoryList({cityid,id})
         }
     }
-
-
 }

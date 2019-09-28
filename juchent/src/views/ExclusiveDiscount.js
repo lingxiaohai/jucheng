@@ -10,6 +10,7 @@ class ExclusiveDiscount extends Component{
     //     const {data} = await axios.get("https://api.juooo.com/vip/index/getDiscountList?page=1&city_id=0&cate_id=0&discount_id=0&version=6.0.6&referer=2");
     //     console.log(data,1212)
     // }
+
     componentDidMount(){
         this.props.getExclusive();
     }
@@ -18,15 +19,17 @@ class ExclusiveDiscount extends Component{
         return (
             <div className="discount">
                 <div className="discount_head">
-                    <section className="title">
-                    <span className="title_text">专享折扣</span>
-                    <i className="iconfont icon-icon_left title_back" onClick={()=>{
+                    <section className="title" onClick={()=>{
+                        this.props.history.push("/")
+                    }}>
+                        <span className="title_text">专享折扣</span>
+                        <i className="iconfont icon-icon_left title_back" onClick={()=>{
 
-                    }}></i>
-                    <i className="iconfont icon-sangedian title_ellipsis"></i>
-                </section>
-            </div>
-            <div className="discount-body">
+                        }}></i>
+                        <i className="iconfont icon-sangedian title_ellipsis"></i>
+                    </section>
+                </div>
+                <div className="discount-body">
                     <div className="tab-box">
                         <div className="tab">
                             <ul className="slide-tab">
@@ -53,12 +56,12 @@ class ExclusiveDiscount extends Component{
                         <div className="wrapper">
                             <ul className="discount-scroll__ul">
                                 {this.props.list.map(item=>
-                                <li className="discount__item">
-                                    <div className="exclusive-card">
-                                        <div className="item exclusive-card__base">
-                                            <img
-                                                src={item.pic}
-                                                alt="" className="item__cover"/>
+                                    <li className="discount__item">
+                                        <div className="exclusive-card">
+                                            <div className="item exclusive-card__base">
+                                                <img
+                                                    src={item.pic}
+                                                    alt="" className="item__cover"/>
                                                 <div className="item__info">
                                                     <div className="item__info__date-week">
                                                         <span className="item__info__date-week__date">{item.date}</span>
@@ -72,20 +75,20 @@ class ExclusiveDiscount extends Component{
                                                         {item.city_name} | {item.venue_name}
                                                     </div>
                                                 </div>
-                                        </div>
-                                        <div className="exclusive-card__extra-wrapper">
-                                            <div className="exclusive-card__extra">
-                                                <span className="exclusive-card__extra__price">￥{item.min_price}</span>
-                                                <span className="exclusive-card__extra__price-desc">起</span>
+                                            </div>
+                                            <div className="exclusive-card__extra-wrapper">
+                                                <div className="exclusive-card__extra">
+                                                    <span className="exclusive-card__extra__price">￥{item.min_price}</span>
+                                                    <span className="exclusive-card__extra__price-desc">起</span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="discount__item__bottom">
-                                        <p className="discount__item__bottom__discount">
-                                            <span className="discount__item__bottom__discount--light">{item.min_discount}</span>折起
-                                        </p>
-                                    </div>
-                                </li>
+                                        <div className="discount__item__bottom">
+                                            <p className="discount__item__bottom__discount">
+                                                <span className="discount__item__bottom__discount--light">{item.min_discount}</span>折起
+                                            </p>
+                                        </div>
+                                    </li>
                                 )}
                             </ul>
                         </div>

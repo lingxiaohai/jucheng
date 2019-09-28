@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom'
  class Vipblock extends React.Component{
 
     render() {
+
         return(
             <section className="vip-block">
                 <a href="/vip/index/1">

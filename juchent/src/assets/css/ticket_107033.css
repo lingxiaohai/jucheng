@@ -948,25 +948,94 @@
     height: 1.2rem;
 }
 
+/* 跳转后 */
+.t-tour-block__content__list[data-v-7f5504b5] {
+    padding: .4rem;
+}
+.t-tour-block__content__list--item[data-v-7f5504b5] {
+    margin-bottom: .32rem;
+}
+.t-show-column[data-v-74dbd923] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.82667rem;
+}
+.t-show-column__date[data-v-74dbd923] {
+    width: 2.93333rem;
+    border-radius: .10667rem 0 0 .10667rem;
+    margin-right: .13333rem;
+    color: #232323;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.t-show-column--will[data-v-74dbd923] {
+    background-color: #fefefe;
+}
+
+.t-show-column__date--bold[data-v-74dbd923] {
+    font-size: .61333rem;
+    font-weight: 400;
+}
+.t-show-column__date--normal[data-v-74dbd923] {
+    font-size: .4rem;
+}
+.t-date--lab[data-v-74dbd923] {
+    margin-left: -.08rem;
+}
+.t-show-column__info[data-v-74dbd923] {
+    width: 6.13333rem;
+    border-radius: .10667rem 0 0 .10667rem;
+    padding: .4rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.t-show-column--will[data-v-74dbd923] {
+    background-color: #fefefe;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.t-show-column__info--title[data-v-74dbd923] {
+    font-size: .42667rem;
+    color: #232323;
+    line-height: .58667rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.t-show-column__info--tip[data-v-74dbd923] {
+    font-size: .37333rem;
+    line-height: .48rem;
+    color: #666;
+    margin-top: .24rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.t-show-column__info--bottom[data-v-74dbd923] {
+    color: #999;
+    font-size: .29333rem;
+    margin-top: .16rem;
+}
+.t-show-column__info--bottom__price[data-v-74dbd923] {
+    color: #ff6743;
+    font-size: .42667rem;
+    margin-right: .13333rem;
+    font-weight: 700;
+}
+.t-show-column__info--bottom[data-v-74dbd923] {
+    color: #999;
+    font-size: .29333rem;
+    margin-top: .16rem;
+}
 
 
 

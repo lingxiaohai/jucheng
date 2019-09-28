@@ -10,7 +10,7 @@ class Slideshow extends Component {
 
     componentDidMount() {
 
-        this.mySwiper1 = new Swiper('.myswiper',{
+        this.mySwiper1 = new Swiper(this.myswipers,{
             loop:false,
             observer: true,
             observeParents: true,
@@ -34,7 +34,7 @@ class Slideshow extends Component {
     render() {
         const newsList = this.props.newsList;
         return (
-            <div className="swiper-container myswiper" >
+            <div className="swiper-container myswiper" ref={el=>this.myswipers=el}>
                 <div className="swiper-wrapper">
                     {newsList.map((v, index) =>
                         <div key={index} className="swiper-slide swiper-slide-duplicate"
